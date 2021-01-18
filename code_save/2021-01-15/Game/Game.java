@@ -15,7 +15,7 @@ public class Game {
         String symbol = "!@#$%^&*()_+-*/=";
         int randomNumber;
         int randomResult;
-        //首先随即决定类型
+        //首先随机决定类型
         for (int i = 0; i < length; i++) {
             //低难度不产生符号
             if (flag){

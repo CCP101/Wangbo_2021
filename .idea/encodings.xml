@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="Encoding" defaultCharsetForPropertiesFiles="UTF-8">
-    <file url="file://$PROJECT_DIR$/code_save/2021-01-15/pet/Dog.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/code_save/2021-01-15/pet/Penguin.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/code_save/2021-01-15/pet/Pet.java" charset="UTF-8" />
+  <component name="Encoding" native2AsciiForPropertiesFiles="true" defaultCharsetForPropertiesFiles="UTF-8">
+    <file url="file://$PROJECT_DIR$/code_save/2021-01-15/Game/Game.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/code_save/2021-01-15/Game/Level.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/code_save/2021-01-15/Game/LevelParam.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/code_save/2021-01-15/Game/Player.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/code_save/2021-01-15/Game/Test.java" charset="UTF-8" />
     <file url="PROJECT" charset="UTF-8" />
   </component>
 </project>
