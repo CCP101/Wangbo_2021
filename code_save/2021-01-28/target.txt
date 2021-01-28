@@ -1,0 +1,6 @@
+问题：
+指定一个目录文本中的内容复制到指定的一个目录文本中：
+通过字节流或者字符流实现：
+要求：通过创建方法实现，利用方法的传参
+public void copyFile(String inputPath, String outputPath){}
+[a, b, c, d, e, f, g, h]
