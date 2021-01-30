@@ -19,11 +19,14 @@ public class Print {
     private static class Num1 implements Runnable {
         @Override
         public void run() {
-            while(i<100){
+            while(i<=70){
                 if(flag==0) {
-                    System.out.println("t1="+i);
-                    i++;
+                    for (int j = 0; j < 5; j++) {
+                        i++;
+                        System.out.println(Thread.currentThread().getName()+" : "+i);
+                    }
                     flag=1;
+                    System.out.println();
                 }
             }
         }
@@ -32,11 +35,14 @@ public class Print {
     private static class Num2 implements Runnable {
         @Override
         public void run() {
-            while(i<100){
+            while(i<=70){
                 if(flag==1) {
-                    System.out.println("t2="+i);
-                    i++;
+                    for (int j = 0; j < 5; j++) {
+                        i++;
+                        System.out.println(Thread.currentThread().getName()+" : "+i);
+                    }
                     flag=2;
+                    System.out.println();
                 }
             }
 
@@ -46,14 +52,16 @@ public class Print {
     private static class Num3 implements Runnable {
         @Override
         public void run() {
-            while(i<100){
+            while(i<=70){
                 if(flag==2) {
-                    System.out.println("t3="+i);
-                    i++;
+                    for (int j = 0; j < 5; j++) {
+                        i++;
+                        System.out.println(Thread.currentThread().getName()+" : "+i);
+                    }
                     flag=0;
+                    System.out.println();
                 }
             }
-
         }
     }
 }

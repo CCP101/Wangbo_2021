@@ -3,7 +3,7 @@ package MarryProject;
 import java.io.IOException;
 import java.util.Scanner;
 
-public class MarryThread implements Runnable{
+public class MarryThread implements Runnable {
     Scanner input = new Scanner(System.in);
     MarrySystem system = new MarrySystem();
     @Override

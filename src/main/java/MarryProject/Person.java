@@ -24,17 +24,20 @@ public class Person {
         }
     }
 
-    /** 中文格式化输出
+    /** 中文等宽格式化输出
      *
      */
     public void print() {
         formatter.format("%-5s\t %5d %5s %5s\n", name, age, sexPrint, isMarried);
     }
 
+    /** 输出包含配偶及子女的个人信息并返回
+     * @return 返回打印格式生成的字符串
+     */
     public String printFile() {
         String temp = "";
-        formatter.format("%-5s\t %5d %5s %5s\n", name, age, sexPrint, isMarried);
-        temp = temp.concat(String.format("%-5s\t %5d %5s %5s\n", name, age, sexPrint, isMarried));
+        formatter.format("%-5s\t %5d %5s %5s\n", name, age, sexPrint, isMarried); //格式化文本在控制台输出
+        temp = temp.concat(String.format("%-5s\t %5d %5s %5s\n", name, age, sexPrint, isMarried)); //拼接格式化后的文本
         if (isMarried.equals("已婚")){
             if (object!=null){
                 formatter.format("├──配偶为%-5s\t\n", object.getName());
