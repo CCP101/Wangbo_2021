@@ -43,11 +43,12 @@ public class MarrySystem {
         int p2 = random.nextInt(peopleNum);
         Person person1 = personLinkedList.get(p1);
         Person person2 = personLinkedList.get(p2);
+        String[] nameChoose = {"三","四","五","六"};
         if (person1.isSex()){
             Person temp = person1;
             person1 = person2;
             person2 = temp;
-        } // 保证在正常情况下，男性在前女性在后，方便条件判断及姓氏获取
+        } // 保证在正常情况下，男性在前女性在后，便于条件判断及姓氏获取
         boolean result = judge(person1,person2);
         if (result){
             int babyNum = random.nextInt(3); //0,1,2
@@ -60,9 +61,8 @@ public class MarrySystem {
                 Person[] babyArray = new Person[babyNum]; //创建数组
                 for (int i = 1; i <= babyNum; i++) {
                     int index = i-1;
-                    System.out.print("请输入新生儿"+i+"名称：");
-                    String tempName = input.next();
-                    String name = person1.getName().substring(0,1).concat(tempName); //拼接姓名
+                    int indexName = random.nextInt(4);
+                    String name = person1.getName().substring(0,1).concat(nameChoose[indexName]); //拼接姓名
                     boolean sex = random.nextBoolean(); //随机性别
                     Person baby = new Person(name,0,sex,"未婚");
                     childLinkedList.add(baby);
@@ -115,8 +115,6 @@ public class MarrySystem {
                 br.write(text);
                 br.flush();
             }
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
         }
