@@ -2,12 +2,12 @@ import java.util.Scanner;
 
 public class ScoreJudge {
     public static void main(String[] args) {
-        System.out.println("ÇëÊäÈë³É¼¨");
+        System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½É¼ï¿½");
         Scanner input = new Scanner(System.in);
         int score = input.nextInt();
         String grade = "";
         if (score>90){
-            grade="A";
+            grade= "code_save/2021-02-02/A";
         }else if (score>75){
             grade="B";
         }else if (score>60){
@@ -15,6 +15,6 @@ public class ScoreJudge {
         }else {
             grade="D";
         }
-        System.out.println("³É¼¨Îª"+grade);
+        System.out.println("ï¿½É¼ï¿½Îª"+grade);
     }
 }
