@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
-    <properties resource="dev/db.properties" />
+    <properties resource="db.properties" />
     <environments default="development">
         <environment id="development">
             <transactionManager type="JDBC" />
-            <!-- 配置数据库连接信息 -->
             <dataSource type="POOLED">
                 <property name="driver" value="${driver}"/>
                 <property name="url" value="${url}"/>
@@ -17,6 +16,8 @@
 
     <mappers>
         <mapper class="com.ccp101.database.dao.ProductDao"/>
+        <mapper class="com.ccp101.database.dao.UserDao"/>
+        <mapper class="com.ccp101.database.dao.ItemDao"/>
+        <mapper class="com.ccp101.database.dao.OrderDao"/>
     </mappers>
-
 </configuration>

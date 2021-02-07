@@ -1,0 +1,565 @@
+2021-02-07 20:00:54  [ main:1 ] - [ DEBUG ]  Logging initialized using 'class org.apache.ibatis.logging.commons.JakartaCommonsLoggingImpl' adapter.
+2021-02-07 20:00:54  [ main:20 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-07 20:00:54  [ main:21 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-07 20:00:54  [ main:22 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-07 20:00:54  [ main:22 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-07 20:00:54  [ main:54 ] - [ INFO ]  连接到MySQL数据库
+2021-02-07 20:00:54  [ main:67 ] - [ DEBUG ]  Opening JDBC Connection
+2021-02-07 20:00:54  [ main:263 ] - [ DEBUG ]  Created connection 1323434987.
+2021-02-07 20:00:54  [ main:264 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@4ee203eb]
+2021-02-07 20:00:54  [ main:269 ] - [ DEBUG ]  ==>  Preparing: INSERT INTO `shopping`.`t_user`(`id`, `username`, `password`, `phone`, `address`, `status`) VALUES (?, ?, ?, ?, ?, ?) 
+2021-02-07 20:00:54  [ main:304 ] - [ DEBUG ]  ==> Parameters: 6(Integer), xxxyy(String), tttt(String), null, null, false(Boolean)
+2021-02-07 20:00:54  [ main:315 ] - [ ERROR ]  存在重复用户名，注册失败
+2021-02-07 20:00:54  [ main:315 ] - [ DEBUG ]  Committing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@4ee203eb]
+2021-02-07 20:00:54  [ main:316 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@4ee203eb]
+2021-02-07 20:00:54  [ main:316 ] - [ DEBUG ]  Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@4ee203eb]
+2021-02-07 20:00:54  [ main:317 ] - [ DEBUG ]  Returned connection 1323434987 to pool.
+2021-02-07 20:08:41  [ main:0 ] - [ DEBUG ]  Logging initialized using 'class org.apache.ibatis.logging.commons.JakartaCommonsLoggingImpl' adapter.
+2021-02-07 20:08:41  [ main:27 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-07 20:08:41  [ main:28 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-07 20:08:41  [ main:28 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-07 20:08:41  [ main:29 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-07 20:08:41  [ main:84 ] - [ INFO ]  连接到MySQL数据库
+2021-02-07 20:08:41  [ main:99 ] - [ DEBUG ]  Opening JDBC Connection
+2021-02-07 20:08:42  [ main:359 ] - [ DEBUG ]  Created connection 1176164144.
+2021-02-07 20:08:42  [ main:359 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@461ad730]
+2021-02-07 20:08:42  [ main:363 ] - [ DEBUG ]  ==>  Preparing: INSERT INTO `shopping`.`t_user`(`id`, `username`, `password`, `phone`, `address`, `status`) VALUES (?, ?, ?, ?, ?, ?) 
+2021-02-07 20:08:42  [ main:415 ] - [ DEBUG ]  ==> Parameters: 6(Integer), xxxyy(String), tttt(String), null, null, false(Boolean)
+2021-02-07 20:08:42  [ main:430 ] - [ ERROR ]  存在重复用户名，注册失败
+2021-02-07 20:08:42  [ main:431 ] - [ DEBUG ]  Committing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@461ad730]
+2021-02-07 20:08:42  [ main:432 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@461ad730]
+2021-02-07 20:08:42  [ main:432 ] - [ DEBUG ]  Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@461ad730]
+2021-02-07 20:08:42  [ main:433 ] - [ DEBUG ]  Returned connection 1176164144 to pool.
+2021-02-07 20:21:44  [ main:0 ] - [ DEBUG ]  Logging initialized using 'class org.apache.ibatis.logging.commons.JakartaCommonsLoggingImpl' adapter.
+2021-02-07 20:21:44  [ main:28 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-07 20:21:44  [ main:28 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-07 20:21:44  [ main:29 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-07 20:21:44  [ main:29 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-07 20:21:44  [ main:66 ] - [ INFO ]  连接到MySQL数据库
+2021-02-07 20:21:44  [ main:78 ] - [ DEBUG ]  Opening JDBC Connection
+2021-02-07 20:21:44  [ main:267 ] - [ DEBUG ]  Created connection 1176164144.
+2021-02-07 20:21:44  [ main:267 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@461ad730]
+2021-02-07 20:21:44  [ main:272 ] - [ DEBUG ]  ==>  Preparing: INSERT INTO `shopping`.`t_user`(`id`, `username`, `password`, `phone`, `address`, `status`) VALUES (?, ?, ?, ?, ?, ?) 
+2021-02-07 20:21:44  [ main:332 ] - [ DEBUG ]  ==> Parameters: 6(Integer), xxxyy(String), tttt(String), null, null, false(Boolean)
+2021-02-07 20:21:44  [ main:346 ] - [ ERROR ]  存在重复用户名，注册失败
+2021-02-07 20:21:44  [ main:346 ] - [ DEBUG ]  Committing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@461ad730]
+2021-02-07 20:21:44  [ main:347 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@461ad730]
+2021-02-07 20:21:44  [ main:349 ] - [ DEBUG ]  Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@461ad730]
+2021-02-07 20:21:44  [ main:350 ] - [ DEBUG ]  Returned connection 1176164144 to pool.
+2021-02-07 20:22:32  [ main:0 ] - [ DEBUG ]  Logging initialized using 'class org.apache.ibatis.logging.commons.JakartaCommonsLoggingImpl' adapter.
+2021-02-07 20:22:32  [ main:22 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-07 20:22:32  [ main:22 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-07 20:22:32  [ main:23 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-07 20:22:32  [ main:23 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-07 20:22:32  [ main:62 ] - [ INFO ]  连接到MySQL数据库
+2021-02-07 20:22:32  [ main:75 ] - [ DEBUG ]  Opening JDBC Connection
+2021-02-07 20:22:32  [ main:286 ] - [ DEBUG ]  Created connection 1176164144.
+2021-02-07 20:22:32  [ main:287 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@461ad730]
+2021-02-07 20:22:32  [ main:290 ] - [ DEBUG ]  ==>  Preparing: INSERT INTO `shopping`.`t_user`(`id`, `username`, `password`, `phone`, `address`, `status`) VALUES (?, ?, ?, ?, ?, ?) 
+2021-02-07 20:22:32  [ main:333 ] - [ DEBUG ]  ==> Parameters: 6(Integer), xxxyy(String), tttt(String), null, null, false(Boolean)
+2021-02-07 20:22:32  [ main:346 ] - [ ERROR ]  存在重复用户名，注册失败
+2021-02-07 20:22:32  [ main:347 ] - [ DEBUG ]  Committing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@461ad730]
+2021-02-07 20:22:32  [ main:349 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@461ad730]
+2021-02-07 20:22:32  [ main:349 ] - [ DEBUG ]  Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@461ad730]
+2021-02-07 20:22:32  [ main:350 ] - [ DEBUG ]  Returned connection 1176164144 to pool.
+2021-02-07 20:23:44  [ main:0 ] - [ DEBUG ]  Logging initialized using 'class org.apache.ibatis.logging.commons.JakartaCommonsLoggingImpl' adapter.
+2021-02-07 20:23:44  [ main:64 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-07 20:23:44  [ main:65 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-07 20:23:44  [ main:65 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-07 20:23:44  [ main:66 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-07 20:23:44  [ main:127 ] - [ INFO ]  连接到MySQL数据库
+2021-02-07 20:23:44  [ main:141 ] - [ DEBUG ]  Opening JDBC Connection
+2021-02-07 20:23:44  [ main:465 ] - [ DEBUG ]  Created connection 1106681476.
+2021-02-07 20:23:44  [ main:465 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@41f69e84]
+2021-02-07 20:23:44  [ main:471 ] - [ DEBUG ]  ==>  Preparing: SELECT t_product.id,t_product.`name`,t_product.price FROM t_product 
+2021-02-07 20:23:44  [ main:528 ] - [ DEBUG ]  ==> Parameters: 
+2021-02-07 20:23:44  [ main:587 ] - [ DEBUG ]  <==      Total: 8
+2021-02-07 20:23:44  [ main:590 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@41f69e84]
+2021-02-07 20:23:44  [ main:591 ] - [ DEBUG ]  Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@41f69e84]
+2021-02-07 20:23:44  [ main:591 ] - [ DEBUG ]  Returned connection 1106681476 to pool.
+2021-02-07 20:23:44  [ main:606 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-07 20:23:44  [ main:610 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-07 20:23:44  [ main:610 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-07 20:23:44  [ main:611 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-07 20:23:44  [ main:617 ] - [ INFO ]  连接到MySQL数据库
+2021-02-07 20:23:44  [ main:619 ] - [ DEBUG ]  Opening JDBC Connection
+2021-02-07 20:23:44  [ main:623 ] - [ DEBUG ]  Created connection 434610528.
+2021-02-07 20:23:44  [ main:623 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@19e7a160]
+2021-02-07 20:23:44  [ main:624 ] - [ DEBUG ]  ==>  Preparing: SELECT t_user.id,t_user.username,t_user.`password`,t_user.address FROM t_user 
+2021-02-07 20:23:44  [ main:625 ] - [ DEBUG ]  ==> Parameters: 
+2021-02-07 20:23:44  [ main:628 ] - [ DEBUG ]  <==      Total: 3
+2021-02-07 20:23:44  [ main:628 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@19e7a160]
+2021-02-07 20:23:44  [ main:629 ] - [ DEBUG ]  Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@19e7a160]
+2021-02-07 20:23:44  [ main:630 ] - [ DEBUG ]  Returned connection 434610528 to pool.
+2021-02-07 20:23:44  [ main:643 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-07 20:23:44  [ main:643 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-07 20:23:44  [ main:643 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-07 20:23:44  [ main:644 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-07 20:23:44  [ main:649 ] - [ INFO ]  连接到MySQL数据库
+2021-02-07 20:23:44  [ main:651 ] - [ DEBUG ]  Opening JDBC Connection
+2021-02-07 20:23:44  [ main:658 ] - [ DEBUG ]  Created connection 1209411469.
+2021-02-07 20:23:44  [ main:658 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@4816278d]
+2021-02-07 20:23:44  [ main:658 ] - [ DEBUG ]  ==>  Preparing: INSERT INTO `shopping`.`t_user`(`id`, `username`, `password`, `phone`, `address`, `status`) VALUES (?, ?, ?, ?, ?, ?) 
+2021-02-07 20:23:44  [ main:660 ] - [ DEBUG ]  ==> Parameters: 6(Integer), xxxyy(String), tttt(String), null, null, false(Boolean)
+2021-02-07 20:23:44  [ main:671 ] - [ ERROR ]  存在重复用户名，注册失败
+2021-02-07 20:23:44  [ main:672 ] - [ DEBUG ]  Committing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@4816278d]
+2021-02-07 20:23:44  [ main:672 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@4816278d]
+2021-02-07 20:23:44  [ main:673 ] - [ DEBUG ]  Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@4816278d]
+2021-02-07 20:23:44  [ main:673 ] - [ DEBUG ]  Returned connection 1209411469 to pool.
+2021-02-07 20:34:25  [ main:0 ] - [ DEBUG ]  Logging initialized using 'class org.apache.ibatis.logging.commons.JakartaCommonsLoggingImpl' adapter.
+2021-02-07 20:34:25  [ main:30 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-07 20:34:25  [ main:30 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-07 20:34:25  [ main:32 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-07 20:34:25  [ main:32 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-07 20:34:25  [ main:80 ] - [ INFO ]  连接到MySQL数据库
+2021-02-07 20:34:25  [ main:90 ] - [ DEBUG ]  Opening JDBC Connection
+2021-02-07 20:34:25  [ main:296 ] - [ DEBUG ]  Created connection 1106681476.
+2021-02-07 20:34:25  [ main:297 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@41f69e84]
+2021-02-07 20:34:25  [ main:300 ] - [ DEBUG ]  ==>  Preparing: SELECT t_product.id,t_product.`name`,t_product.price FROM t_product 
+2021-02-07 20:34:25  [ main:343 ] - [ DEBUG ]  ==> Parameters: 
+2021-02-07 20:34:25  [ main:385 ] - [ DEBUG ]  <==      Total: 8
+2021-02-07 20:34:25  [ main:387 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@41f69e84]
+2021-02-07 20:34:25  [ main:388 ] - [ DEBUG ]  Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@41f69e84]
+2021-02-07 20:34:25  [ main:388 ] - [ DEBUG ]  Returned connection 1106681476 to pool.
+2021-02-07 20:34:25  [ main:397 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-07 20:34:25  [ main:398 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-07 20:34:25  [ main:399 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-07 20:34:25  [ main:399 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-07 20:34:25  [ main:402 ] - [ INFO ]  连接到MySQL数据库
+2021-02-07 20:34:25  [ main:404 ] - [ DEBUG ]  Opening JDBC Connection
+2021-02-07 20:34:25  [ main:407 ] - [ DEBUG ]  Created connection 434610528.
+2021-02-07 20:34:25  [ main:407 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@19e7a160]
+2021-02-07 20:34:25  [ main:408 ] - [ DEBUG ]  ==>  Preparing: SELECT t_user.id,t_user.username,t_user.`password`,t_user.address FROM t_user 
+2021-02-07 20:34:25  [ main:409 ] - [ DEBUG ]  ==> Parameters: 
+2021-02-07 20:34:25  [ main:411 ] - [ DEBUG ]  <==      Total: 3
+2021-02-07 20:34:25  [ main:411 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@19e7a160]
+2021-02-07 20:34:25  [ main:412 ] - [ DEBUG ]  Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@19e7a160]
+2021-02-07 20:34:25  [ main:412 ] - [ DEBUG ]  Returned connection 434610528 to pool.
+2021-02-07 20:34:25  [ main:420 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-07 20:34:25  [ main:420 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-07 20:34:25  [ main:421 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-07 20:34:25  [ main:421 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-07 20:34:25  [ main:424 ] - [ INFO ]  连接到MySQL数据库
+2021-02-07 20:34:25  [ main:427 ] - [ DEBUG ]  Opening JDBC Connection
+2021-02-07 20:34:25  [ main:431 ] - [ DEBUG ]  Created connection 1320105604.
+2021-02-07 20:34:25  [ main:432 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@4eaf3684]
+2021-02-07 20:34:25  [ main:432 ] - [ DEBUG ]  ==>  Preparing: SELECT t_user.id FROM t_user WHERE t_user.username = ? AND t_user.`password` = ? 
+2021-02-07 20:34:25  [ main:433 ] - [ DEBUG ]  ==> Parameters: xxx(String), yyy(String)
+2021-02-07 20:34:25  [ main:434 ] - [ DEBUG ]  <==      Total: 0
+2021-02-07 20:34:25  [ main:434 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@4eaf3684]
+2021-02-07 20:34:25  [ main:435 ] - [ DEBUG ]  Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@4eaf3684]
+2021-02-07 20:34:25  [ main:435 ] - [ DEBUG ]  Returned connection 1320105604 to pool.
+2021-02-07 20:34:57  [ main:0 ] - [ DEBUG ]  Logging initialized using 'class org.apache.ibatis.logging.commons.JakartaCommonsLoggingImpl' adapter.
+2021-02-07 20:34:57  [ main:31 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-07 20:34:57  [ main:31 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-07 20:34:57  [ main:32 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-07 20:34:57  [ main:32 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-07 20:34:57  [ main:77 ] - [ INFO ]  连接到MySQL数据库
+2021-02-07 20:34:57  [ main:89 ] - [ DEBUG ]  Opening JDBC Connection
+2021-02-07 20:34:57  [ main:355 ] - [ DEBUG ]  Created connection 1106681476.
+2021-02-07 20:34:57  [ main:356 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@41f69e84]
+2021-02-07 20:34:57  [ main:360 ] - [ DEBUG ]  ==>  Preparing: SELECT t_product.id,t_product.`name`,t_product.price FROM t_product 
+2021-02-07 20:34:57  [ main:408 ] - [ DEBUG ]  ==> Parameters: 
+2021-02-07 20:34:57  [ main:439 ] - [ DEBUG ]  <==      Total: 8
+2021-02-07 20:34:57  [ main:442 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@41f69e84]
+2021-02-07 20:34:57  [ main:443 ] - [ DEBUG ]  Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@41f69e84]
+2021-02-07 20:34:57  [ main:443 ] - [ DEBUG ]  Returned connection 1106681476 to pool.
+2021-02-07 20:34:57  [ main:451 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-07 20:34:57  [ main:452 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-07 20:34:57  [ main:452 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-07 20:34:57  [ main:453 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-07 20:34:57  [ main:456 ] - [ INFO ]  连接到MySQL数据库
+2021-02-07 20:34:57  [ main:458 ] - [ DEBUG ]  Opening JDBC Connection
+2021-02-07 20:34:57  [ main:461 ] - [ DEBUG ]  Created connection 434610528.
+2021-02-07 20:34:57  [ main:462 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@19e7a160]
+2021-02-07 20:34:57  [ main:462 ] - [ DEBUG ]  ==>  Preparing: SELECT t_user.id,t_user.username,t_user.`password`,t_user.address FROM t_user 
+2021-02-07 20:34:57  [ main:463 ] - [ DEBUG ]  ==> Parameters: 
+2021-02-07 20:34:57  [ main:465 ] - [ DEBUG ]  <==      Total: 3
+2021-02-07 20:34:57  [ main:465 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@19e7a160]
+2021-02-07 20:34:57  [ main:465 ] - [ DEBUG ]  Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@19e7a160]
+2021-02-07 20:34:57  [ main:466 ] - [ DEBUG ]  Returned connection 434610528 to pool.
+2021-02-07 20:34:57  [ main:474 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-07 20:34:57  [ main:475 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-07 20:34:57  [ main:475 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-07 20:34:57  [ main:475 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-07 20:34:57  [ main:479 ] - [ INFO ]  连接到MySQL数据库
+2021-02-07 20:34:57  [ main:481 ] - [ DEBUG ]  Opening JDBC Connection
+2021-02-07 20:34:57  [ main:485 ] - [ DEBUG ]  Created connection 1320105604.
+2021-02-07 20:34:57  [ main:485 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@4eaf3684]
+2021-02-07 20:34:57  [ main:485 ] - [ DEBUG ]  ==>  Preparing: SELECT t_user.id FROM t_user WHERE t_user.username = ? AND t_user.`password` = ? 
+2021-02-07 20:34:57  [ main:486 ] - [ DEBUG ]  ==> Parameters: xxx(String), tttt(String)
+2021-02-07 20:34:57  [ main:487 ] - [ DEBUG ]  <==      Total: 1
+2021-02-07 20:34:57  [ main:488 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@4eaf3684]
+2021-02-07 20:34:57  [ main:488 ] - [ DEBUG ]  Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@4eaf3684]
+2021-02-07 20:34:57  [ main:489 ] - [ DEBUG ]  Returned connection 1320105604 to pool.
+2021-02-07 20:37:52  [ main:0 ] - [ DEBUG ]  Logging initialized using 'class org.apache.ibatis.logging.commons.JakartaCommonsLoggingImpl' adapter.
+2021-02-07 20:37:52  [ main:25 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-07 20:37:52  [ main:25 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-07 20:37:52  [ main:25 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-07 20:37:52  [ main:26 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-07 20:37:52  [ main:69 ] - [ INFO ]  连接到MySQL数据库
+2021-02-07 20:37:52  [ main:83 ] - [ DEBUG ]  Opening JDBC Connection
+2021-02-07 20:37:52  [ main:294 ] - [ DEBUG ]  Created connection 1106681476.
+2021-02-07 20:37:52  [ main:295 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@41f69e84]
+2021-02-07 20:37:52  [ main:298 ] - [ DEBUG ]  ==>  Preparing: SELECT t_product.id,t_product.`name`,t_product.price FROM t_product 
+2021-02-07 20:37:53  [ main:342 ] - [ DEBUG ]  ==> Parameters: 
+2021-02-07 20:37:53  [ main:376 ] - [ DEBUG ]  <==      Total: 8
+2021-02-07 20:37:53  [ main:380 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@41f69e84]
+2021-02-07 20:37:53  [ main:380 ] - [ DEBUG ]  Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@41f69e84]
+2021-02-07 20:37:53  [ main:381 ] - [ DEBUG ]  Returned connection 1106681476 to pool.
+2021-02-07 20:37:53  [ main:389 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-07 20:37:53  [ main:391 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-07 20:37:53  [ main:391 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-07 20:37:53  [ main:391 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-07 20:37:53  [ main:394 ] - [ INFO ]  连接到MySQL数据库
+2021-02-07 20:37:53  [ main:396 ] - [ DEBUG ]  Opening JDBC Connection
+2021-02-07 20:37:53  [ main:399 ] - [ DEBUG ]  Created connection 434610528.
+2021-02-07 20:37:53  [ main:399 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@19e7a160]
+2021-02-07 20:37:53  [ main:399 ] - [ DEBUG ]  ==>  Preparing: SELECT t_user.id,t_user.username,t_user.`password`,t_user.address FROM t_user 
+2021-02-07 20:37:53  [ main:400 ] - [ DEBUG ]  ==> Parameters: 
+2021-02-07 20:37:53  [ main:401 ] - [ DEBUG ]  <==      Total: 3
+2021-02-07 20:37:53  [ main:402 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@19e7a160]
+2021-02-07 20:37:53  [ main:402 ] - [ DEBUG ]  Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@19e7a160]
+2021-02-07 20:37:53  [ main:403 ] - [ DEBUG ]  Returned connection 434610528 to pool.
+2021-02-07 20:37:53  [ main:410 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-07 20:37:53  [ main:411 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-07 20:37:53  [ main:411 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-07 20:37:53  [ main:411 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-07 20:37:53  [ main:415 ] - [ INFO ]  连接到MySQL数据库
+2021-02-07 20:37:53  [ main:417 ] - [ DEBUG ]  Opening JDBC Connection
+2021-02-07 20:37:53  [ main:422 ] - [ DEBUG ]  Created connection 1320105604.
+2021-02-07 20:37:53  [ main:423 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@4eaf3684]
+2021-02-07 20:37:53  [ main:423 ] - [ DEBUG ]  ==>  Preparing: SELECT t_user.id FROM t_user WHERE t_user.username = ? AND t_user.`password` = ? 
+2021-02-07 20:37:53  [ main:424 ] - [ DEBUG ]  ==> Parameters: xxx(String), tttt(String)
+2021-02-07 20:37:53  [ main:425 ] - [ DEBUG ]  <==      Total: 1
+2021-02-07 20:37:53  [ main:426 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@4eaf3684]
+2021-02-07 20:37:53  [ main:427 ] - [ DEBUG ]  Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@4eaf3684]
+2021-02-07 20:37:53  [ main:427 ] - [ DEBUG ]  Returned connection 1320105604 to pool.
+2021-02-07 20:37:53  [ main:427 ] - [ INFO ]  1
+2021-02-07 20:40:02  [ main:0 ] - [ DEBUG ]  Logging initialized using 'class org.apache.ibatis.logging.commons.JakartaCommonsLoggingImpl' adapter.
+2021-02-07 20:40:02  [ main:24 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-07 20:40:02  [ main:25 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-07 20:40:02  [ main:25 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-07 20:40:02  [ main:25 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-07 20:40:02  [ main:69 ] - [ INFO ]  连接到MySQL数据库
+2021-02-07 20:40:02  [ main:79 ] - [ DEBUG ]  Opening JDBC Connection
+2021-02-07 20:40:03  [ main:295 ] - [ DEBUG ]  Created connection 1106681476.
+2021-02-07 20:40:03  [ main:296 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@41f69e84]
+2021-02-07 20:40:03  [ main:300 ] - [ DEBUG ]  ==>  Preparing: SELECT t_product.id,t_product.`name`,t_product.price FROM t_product 
+2021-02-07 20:40:03  [ main:349 ] - [ DEBUG ]  ==> Parameters: 
+2021-02-07 20:40:03  [ main:398 ] - [ DEBUG ]  <==      Total: 8
+2021-02-07 20:40:03  [ main:401 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@41f69e84]
+2021-02-07 20:40:03  [ main:402 ] - [ DEBUG ]  Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@41f69e84]
+2021-02-07 20:40:03  [ main:402 ] - [ DEBUG ]  Returned connection 1106681476 to pool.
+2021-02-07 20:40:03  [ main:413 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-07 20:40:03  [ main:414 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-07 20:40:03  [ main:415 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-07 20:40:03  [ main:415 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-07 20:40:03  [ main:420 ] - [ INFO ]  连接到MySQL数据库
+2021-02-07 20:40:03  [ main:421 ] - [ DEBUG ]  Opening JDBC Connection
+2021-02-07 20:40:03  [ main:426 ] - [ DEBUG ]  Created connection 434610528.
+2021-02-07 20:40:03  [ main:426 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@19e7a160]
+2021-02-07 20:40:03  [ main:426 ] - [ DEBUG ]  ==>  Preparing: SELECT t_user.id,t_user.username,t_user.`password`,t_user.address FROM t_user 
+2021-02-07 20:40:03  [ main:427 ] - [ DEBUG ]  ==> Parameters: 
+2021-02-07 20:40:03  [ main:429 ] - [ DEBUG ]  <==      Total: 3
+2021-02-07 20:40:03  [ main:430 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@19e7a160]
+2021-02-07 20:40:03  [ main:431 ] - [ DEBUG ]  Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@19e7a160]
+2021-02-07 20:40:03  [ main:432 ] - [ DEBUG ]  Returned connection 434610528 to pool.
+2021-02-07 20:40:03  [ main:446 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-07 20:40:03  [ main:446 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-07 20:40:03  [ main:446 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-07 20:40:03  [ main:447 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-07 20:40:03  [ main:452 ] - [ INFO ]  连接到MySQL数据库
+2021-02-07 20:40:03  [ main:454 ] - [ DEBUG ]  Opening JDBC Connection
+2021-02-07 20:40:03  [ main:461 ] - [ DEBUG ]  Created connection 1320105604.
+2021-02-07 20:40:03  [ main:461 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@4eaf3684]
+2021-02-07 20:40:03  [ main:462 ] - [ DEBUG ]  ==>  Preparing: SELECT t_user.id FROM t_user WHERE t_user.username = ? AND t_user.`password` = ? 
+2021-02-07 20:40:03  [ main:462 ] - [ DEBUG ]  ==> Parameters: xxx(String), tttt(String)
+2021-02-07 20:40:03  [ main:464 ] - [ DEBUG ]  <==      Total: 1
+2021-02-07 20:40:03  [ main:464 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@4eaf3684]
+2021-02-07 20:40:03  [ main:465 ] - [ DEBUG ]  Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@4eaf3684]
+2021-02-07 20:40:03  [ main:465 ] - [ DEBUG ]  Returned connection 1320105604 to pool.
+2021-02-07 20:40:03  [ main:466 ] - [ INFO ]  登陆成功
+2021-02-07 20:50:41  [ main:0 ] - [ DEBUG ]  Logging initialized using 'class org.apache.ibatis.logging.commons.JakartaCommonsLoggingImpl' adapter.
+2021-02-07 20:50:41  [ main:24 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-07 20:50:41  [ main:25 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-07 20:50:41  [ main:25 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-07 20:50:41  [ main:25 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-07 20:50:41  [ main:67 ] - [ INFO ]  连接到MySQL数据库
+2021-02-07 20:50:41  [ main:79 ] - [ DEBUG ]  Opening JDBC Connection
+2021-02-07 20:50:41  [ main:297 ] - [ DEBUG ]  Created connection 1106681476.
+2021-02-07 20:50:41  [ main:297 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@41f69e84]
+2021-02-07 20:50:41  [ main:301 ] - [ DEBUG ]  ==>  Preparing: SELECT t_product.id,t_product.`name`,t_product.price FROM t_product 
+2021-02-07 20:50:41  [ main:349 ] - [ DEBUG ]  ==> Parameters: 
+2021-02-07 20:50:41  [ main:385 ] - [ DEBUG ]  <==      Total: 8
+2021-02-07 20:50:41  [ main:388 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@41f69e84]
+2021-02-07 20:50:41  [ main:388 ] - [ DEBUG ]  Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@41f69e84]
+2021-02-07 20:50:41  [ main:389 ] - [ DEBUG ]  Returned connection 1106681476 to pool.
+2021-02-07 20:50:41  [ main:397 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-07 20:50:41  [ main:398 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-07 20:50:41  [ main:398 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-07 20:50:41  [ main:398 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-07 20:50:41  [ main:402 ] - [ INFO ]  连接到MySQL数据库
+2021-02-07 20:50:41  [ main:403 ] - [ DEBUG ]  Opening JDBC Connection
+2021-02-07 20:50:41  [ main:406 ] - [ DEBUG ]  Created connection 434610528.
+2021-02-07 20:50:41  [ main:406 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@19e7a160]
+2021-02-07 20:50:41  [ main:406 ] - [ DEBUG ]  ==>  Preparing: SELECT t_user.id,t_user.username,t_user.`password`,t_user.address FROM t_user 
+2021-02-07 20:50:41  [ main:407 ] - [ DEBUG ]  ==> Parameters: 
+2021-02-07 20:50:41  [ main:408 ] - [ DEBUG ]  <==      Total: 3
+2021-02-07 20:50:41  [ main:409 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@19e7a160]
+2021-02-07 20:50:41  [ main:409 ] - [ DEBUG ]  Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@19e7a160]
+2021-02-07 20:50:41  [ main:409 ] - [ DEBUG ]  Returned connection 434610528 to pool.
+2021-02-07 20:50:41  [ main:419 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-07 20:50:41  [ main:419 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-07 20:50:41  [ main:420 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-07 20:50:41  [ main:420 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-07 20:50:41  [ main:423 ] - [ INFO ]  连接到MySQL数据库
+2021-02-07 20:50:41  [ main:424 ] - [ DEBUG ]  Opening JDBC Connection
+2021-02-07 20:50:41  [ main:428 ] - [ DEBUG ]  Created connection 1320105604.
+2021-02-07 20:50:41  [ main:428 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@4eaf3684]
+2021-02-07 20:50:41  [ main:429 ] - [ DEBUG ]  ==>  Preparing: SELECT t_user.id FROM t_user WHERE t_user.username = ? AND t_user.`password` = ? 
+2021-02-07 20:50:41  [ main:429 ] - [ DEBUG ]  ==> Parameters: xxx(String), tttt(String)
+2021-02-07 20:50:41  [ main:431 ] - [ DEBUG ]  <==      Total: 1
+2021-02-07 20:50:41  [ main:431 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@4eaf3684]
+2021-02-07 20:50:41  [ main:432 ] - [ DEBUG ]  Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@4eaf3684]
+2021-02-07 20:50:41  [ main:432 ] - [ DEBUG ]  Returned connection 1320105604 to pool.
+2021-02-07 20:50:41  [ main:432 ] - [ INFO ]  登陆成功
+2021-02-07 20:50:41  [ Finalizer:553 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-07 20:50:41  [ Finalizer:555 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-07 20:53:42  [ main:0 ] - [ DEBUG ]  Logging initialized using 'class org.apache.ibatis.logging.commons.JakartaCommonsLoggingImpl' adapter.
+2021-02-07 20:53:42  [ main:24 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-07 20:53:42  [ main:25 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-07 20:53:42  [ main:25 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-07 20:53:42  [ main:26 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-07 20:53:42  [ main:63 ] - [ INFO ]  连接到MySQL数据库
+2021-02-07 20:53:42  [ main:73 ] - [ DEBUG ]  Opening JDBC Connection
+2021-02-07 20:53:43  [ main:263 ] - [ DEBUG ]  Created connection 1106681476.
+2021-02-07 20:53:43  [ main:263 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@41f69e84]
+2021-02-07 20:53:43  [ main:267 ] - [ DEBUG ]  ==>  Preparing: SELECT t_product.id,t_product.`name`,t_product.price FROM t_product 
+2021-02-07 20:53:43  [ main:300 ] - [ DEBUG ]  ==> Parameters: 
+2021-02-07 20:53:43  [ main:332 ] - [ DEBUG ]  <==      Total: 8
+2021-02-07 20:53:43  [ main:335 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@41f69e84]
+2021-02-07 20:53:43  [ main:336 ] - [ DEBUG ]  Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@41f69e84]
+2021-02-07 20:53:43  [ main:336 ] - [ DEBUG ]  Returned connection 1106681476 to pool.
+2021-02-07 20:53:43  [ main:345 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-07 20:53:43  [ main:346 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-07 20:53:43  [ main:346 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-07 20:53:43  [ main:346 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-07 20:53:43  [ main:350 ] - [ INFO ]  连接到MySQL数据库
+2021-02-07 20:53:43  [ main:351 ] - [ DEBUG ]  Opening JDBC Connection
+2021-02-07 20:53:43  [ main:354 ] - [ DEBUG ]  Created connection 434610528.
+2021-02-07 20:53:43  [ main:355 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@19e7a160]
+2021-02-07 20:53:43  [ main:355 ] - [ DEBUG ]  ==>  Preparing: SELECT t_user.id,t_user.username,t_user.`password`,t_user.address FROM t_user 
+2021-02-07 20:53:43  [ main:356 ] - [ DEBUG ]  ==> Parameters: 
+2021-02-07 20:53:43  [ main:357 ] - [ DEBUG ]  <==      Total: 3
+2021-02-07 20:53:43  [ main:358 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@19e7a160]
+2021-02-07 20:53:43  [ main:358 ] - [ DEBUG ]  Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@19e7a160]
+2021-02-07 20:53:43  [ main:359 ] - [ DEBUG ]  Returned connection 434610528 to pool.
+2021-02-07 20:53:43  [ main:366 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-07 20:53:43  [ main:366 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-07 20:53:43  [ main:366 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-07 20:53:43  [ main:366 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-07 20:53:43  [ main:372 ] - [ INFO ]  连接到MySQL数据库
+2021-02-07 20:53:43  [ main:373 ] - [ DEBUG ]  Opening JDBC Connection
+2021-02-07 20:53:43  [ main:378 ] - [ DEBUG ]  Created connection 1320105604.
+2021-02-07 20:53:43  [ main:379 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@4eaf3684]
+2021-02-07 20:53:43  [ main:379 ] - [ DEBUG ]  ==>  Preparing: SELECT t_user.id FROM t_user WHERE t_user.username = ? AND t_user.`password` = ? 
+2021-02-07 20:53:43  [ main:380 ] - [ DEBUG ]  ==> Parameters: xxx(String), tttt(String)
+2021-02-07 20:53:43  [ main:381 ] - [ DEBUG ]  <==      Total: 1
+2021-02-07 20:53:43  [ main:381 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@4eaf3684]
+2021-02-07 20:53:43  [ main:382 ] - [ DEBUG ]  Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@4eaf3684]
+2021-02-07 20:53:43  [ main:382 ] - [ DEBUG ]  Returned connection 1320105604 to pool.
+2021-02-07 20:53:43  [ main:382 ] - [ INFO ]  登陆成功
+2021-02-07 20:53:43  [ Finalizer:452 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-07 20:53:43  [ Finalizer:455 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-07 20:57:16  [ AWT-EventQueue-0:0 ] - [ DEBUG ]  Logging initialized using 'class org.apache.ibatis.logging.commons.JakartaCommonsLoggingImpl' adapter.
+2021-02-07 20:57:16  [ AWT-EventQueue-0:24 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-07 20:57:16  [ AWT-EventQueue-0:25 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-07 20:57:16  [ AWT-EventQueue-0:25 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-07 20:57:16  [ AWT-EventQueue-0:25 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-07 20:57:16  [ AWT-EventQueue-0:53 ] - [ INFO ]  连接到MySQL数据库
+2021-02-07 20:57:16  [ AWT-EventQueue-0:63 ] - [ DEBUG ]  Opening JDBC Connection
+2021-02-07 20:57:16  [ AWT-EventQueue-0:214 ] - [ DEBUG ]  Created connection 48858422.
+2021-02-07 20:57:16  [ AWT-EventQueue-0:215 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@2e98536]
+2021-02-07 20:57:16  [ AWT-EventQueue-0:219 ] - [ DEBUG ]  ==>  Preparing: SELECT t_user.id FROM t_user WHERE t_user.username = ? AND t_user.`password` = ? 
+2021-02-07 20:57:16  [ AWT-EventQueue-0:264 ] - [ DEBUG ]  ==> Parameters: null, Password:(String)
+2021-02-07 20:57:16  [ AWT-EventQueue-0:299 ] - [ DEBUG ]  <==      Total: 0
+2021-02-07 20:57:16  [ AWT-EventQueue-0:302 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@2e98536]
+2021-02-07 20:57:16  [ AWT-EventQueue-0:302 ] - [ DEBUG ]  Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@2e98536]
+2021-02-07 20:57:16  [ AWT-EventQueue-0:302 ] - [ DEBUG ]  Returned connection 48858422 to pool.
+2021-02-07 20:57:16  [ AWT-EventQueue-0:303 ] - [ ERROR ]  登陆失败
+2021-02-07 20:57:41  [ AWT-EventQueue-0:25373 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-07 20:57:41  [ AWT-EventQueue-0:25374 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-07 20:57:41  [ AWT-EventQueue-0:25374 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-07 20:57:41  [ AWT-EventQueue-0:25375 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-07 20:57:41  [ AWT-EventQueue-0:25380 ] - [ INFO ]  连接到MySQL数据库
+2021-02-07 20:57:41  [ AWT-EventQueue-0:25381 ] - [ DEBUG ]  Opening JDBC Connection
+2021-02-07 20:57:41  [ AWT-EventQueue-0:25385 ] - [ DEBUG ]  Created connection 649310152.
+2021-02-07 20:57:41  [ AWT-EventQueue-0:25386 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@26b3afc8]
+2021-02-07 20:57:41  [ AWT-EventQueue-0:25386 ] - [ DEBUG ]  ==>  Preparing: SELECT t_user.id FROM t_user WHERE t_user.username = ? AND t_user.`password` = ? 
+2021-02-07 20:57:41  [ AWT-EventQueue-0:25387 ] - [ DEBUG ]  ==> Parameters: null, Password:(String)
+2021-02-07 20:57:41  [ AWT-EventQueue-0:25389 ] - [ DEBUG ]  <==      Total: 0
+2021-02-07 20:57:41  [ AWT-EventQueue-0:25390 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@26b3afc8]
+2021-02-07 20:57:41  [ AWT-EventQueue-0:25391 ] - [ DEBUG ]  Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@26b3afc8]
+2021-02-07 20:57:41  [ AWT-EventQueue-0:25392 ] - [ DEBUG ]  Returned connection 649310152 to pool.
+2021-02-07 20:57:41  [ AWT-EventQueue-0:25392 ] - [ ERROR ]  登陆失败
+2021-02-07 20:58:24  [ AWT-EventQueue-0:0 ] - [ DEBUG ]  Logging initialized using 'class org.apache.ibatis.logging.commons.JakartaCommonsLoggingImpl' adapter.
+2021-02-07 20:58:24  [ AWT-EventQueue-0:20 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-07 20:58:24  [ AWT-EventQueue-0:21 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-07 20:58:24  [ AWT-EventQueue-0:21 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-07 20:58:24  [ AWT-EventQueue-0:21 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-07 20:58:24  [ AWT-EventQueue-0:49 ] - [ INFO ]  连接到MySQL数据库
+2021-02-07 20:58:24  [ AWT-EventQueue-0:60 ] - [ DEBUG ]  Opening JDBC Connection
+2021-02-07 20:58:24  [ AWT-EventQueue-0:227 ] - [ DEBUG ]  Created connection 1955381630.
+2021-02-07 20:58:24  [ AWT-EventQueue-0:228 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@748cc17e]
+2021-02-07 20:58:24  [ AWT-EventQueue-0:233 ] - [ DEBUG ]  ==>  Preparing: SELECT t_user.id FROM t_user WHERE t_user.username = ? AND t_user.`password` = ? 
+2021-02-07 20:58:24  [ AWT-EventQueue-0:262 ] - [ DEBUG ]  ==> Parameters: 1(String), Password:(String)
+2021-02-07 20:58:24  [ AWT-EventQueue-0:291 ] - [ DEBUG ]  <==      Total: 0
+2021-02-07 20:58:24  [ AWT-EventQueue-0:293 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@748cc17e]
+2021-02-07 20:58:24  [ AWT-EventQueue-0:294 ] - [ DEBUG ]  Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@748cc17e]
+2021-02-07 20:58:24  [ AWT-EventQueue-0:294 ] - [ DEBUG ]  Returned connection 1955381630 to pool.
+2021-02-07 20:58:24  [ AWT-EventQueue-0:295 ] - [ ERROR ]  登陆失败
+2021-02-07 20:58:36  [ AWT-EventQueue-0:12777 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-07 20:58:36  [ AWT-EventQueue-0:12777 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-07 20:58:36  [ AWT-EventQueue-0:12778 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-07 20:58:36  [ AWT-EventQueue-0:12778 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-07 20:58:36  [ AWT-EventQueue-0:12781 ] - [ INFO ]  连接到MySQL数据库
+2021-02-07 20:58:36  [ AWT-EventQueue-0:12781 ] - [ DEBUG ]  Opening JDBC Connection
+2021-02-07 20:58:36  [ AWT-EventQueue-0:12784 ] - [ DEBUG ]  Created connection 86508146.
+2021-02-07 20:58:36  [ AWT-EventQueue-0:12785 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@5280272]
+2021-02-07 20:58:36  [ AWT-EventQueue-0:12785 ] - [ DEBUG ]  ==>  Preparing: SELECT t_user.id FROM t_user WHERE t_user.username = ? AND t_user.`password` = ? 
+2021-02-07 20:58:36  [ AWT-EventQueue-0:12786 ] - [ DEBUG ]  ==> Parameters: xxx(String), Password:(String)
+2021-02-07 20:58:36  [ AWT-EventQueue-0:12787 ] - [ DEBUG ]  <==      Total: 0
+2021-02-07 20:58:36  [ AWT-EventQueue-0:12787 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@5280272]
+2021-02-07 20:58:36  [ AWT-EventQueue-0:12788 ] - [ DEBUG ]  Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@5280272]
+2021-02-07 20:58:36  [ AWT-EventQueue-0:12788 ] - [ DEBUG ]  Returned connection 86508146 to pool.
+2021-02-07 20:58:36  [ AWT-EventQueue-0:12788 ] - [ ERROR ]  登陆失败
+2021-02-07 21:00:46  [ AWT-EventQueue-0:142066 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-07 21:00:46  [ AWT-EventQueue-0:142066 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-07 21:00:46  [ AWT-EventQueue-0:142066 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-07 21:00:46  [ AWT-EventQueue-0:142066 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-07 21:00:46  [ AWT-EventQueue-0:142070 ] - [ INFO ]  连接到MySQL数据库
+2021-02-07 21:00:46  [ AWT-EventQueue-0:142071 ] - [ DEBUG ]  Opening JDBC Connection
+2021-02-07 21:00:46  [ AWT-EventQueue-0:142075 ] - [ DEBUG ]  Created connection 386364794.
+2021-02-07 21:00:46  [ AWT-EventQueue-0:142075 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@1707757a]
+2021-02-07 21:00:46  [ AWT-EventQueue-0:142076 ] - [ DEBUG ]  ==>  Preparing: SELECT t_user.id FROM t_user WHERE t_user.username = ? AND t_user.`password` = ? 
+2021-02-07 21:00:46  [ AWT-EventQueue-0:142076 ] - [ DEBUG ]  ==> Parameters: xxx(String), Password:(String)
+2021-02-07 21:00:46  [ AWT-EventQueue-0:142077 ] - [ DEBUG ]  <==      Total: 0
+2021-02-07 21:00:46  [ AWT-EventQueue-0:142077 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@1707757a]
+2021-02-07 21:00:46  [ AWT-EventQueue-0:142077 ] - [ DEBUG ]  Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@1707757a]
+2021-02-07 21:00:46  [ AWT-EventQueue-0:142077 ] - [ DEBUG ]  Returned connection 386364794 to pool.
+2021-02-07 21:00:46  [ AWT-EventQueue-0:142077 ] - [ ERROR ]  登陆失败
+2021-02-07 21:03:08  [ AWT-EventQueue-0:0 ] - [ DEBUG ]  Logging initialized using 'class org.apache.ibatis.logging.commons.JakartaCommonsLoggingImpl' adapter.
+2021-02-07 21:03:08  [ AWT-EventQueue-0:20 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-07 21:03:08  [ AWT-EventQueue-0:21 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-07 21:03:08  [ AWT-EventQueue-0:21 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-07 21:03:08  [ AWT-EventQueue-0:21 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-07 21:03:08  [ AWT-EventQueue-0:48 ] - [ INFO ]  连接到MySQL数据库
+2021-02-07 21:03:08  [ AWT-EventQueue-0:59 ] - [ DEBUG ]  Opening JDBC Connection
+2021-02-07 21:03:08  [ AWT-EventQueue-0:210 ] - [ DEBUG ]  Created connection 1072756930.
+2021-02-07 21:03:08  [ AWT-EventQueue-0:211 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@3ff0f8c2]
+2021-02-07 21:03:08  [ AWT-EventQueue-0:217 ] - [ DEBUG ]  ==>  Preparing: SELECT t_user.id FROM t_user WHERE t_user.username = ? AND t_user.`password` = ? 
+2021-02-07 21:03:08  [ AWT-EventQueue-0:252 ] - [ DEBUG ]  ==> Parameters: xxx(String), [t, t, t, t](String)
+2021-02-07 21:03:08  [ AWT-EventQueue-0:279 ] - [ DEBUG ]  <==      Total: 0
+2021-02-07 21:03:08  [ AWT-EventQueue-0:281 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@3ff0f8c2]
+2021-02-07 21:03:08  [ AWT-EventQueue-0:282 ] - [ DEBUG ]  Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@3ff0f8c2]
+2021-02-07 21:03:08  [ AWT-EventQueue-0:282 ] - [ DEBUG ]  Returned connection 1072756930 to pool.
+2021-02-07 21:03:08  [ AWT-EventQueue-0:282 ] - [ ERROR ]  登陆失败
+2021-02-07 21:05:05  [ AWT-EventQueue-0:0 ] - [ DEBUG ]  Logging initialized using 'class org.apache.ibatis.logging.commons.JakartaCommonsLoggingImpl' adapter.
+2021-02-07 21:05:06  [ AWT-EventQueue-0:20 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-07 21:05:06  [ AWT-EventQueue-0:20 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-07 21:05:06  [ AWT-EventQueue-0:21 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-07 21:05:06  [ AWT-EventQueue-0:21 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-07 21:05:06  [ AWT-EventQueue-0:51 ] - [ INFO ]  连接到MySQL数据库
+2021-02-07 21:05:06  [ AWT-EventQueue-0:63 ] - [ DEBUG ]  Opening JDBC Connection
+2021-02-07 21:05:06  [ AWT-EventQueue-0:215 ] - [ DEBUG ]  Created connection 382797047.
+2021-02-07 21:05:06  [ AWT-EventQueue-0:215 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@16d104f7]
+2021-02-07 21:05:06  [ AWT-EventQueue-0:219 ] - [ DEBUG ]  ==>  Preparing: SELECT t_user.id FROM t_user WHERE t_user.username = ? AND t_user.`password` = ? 
+2021-02-07 21:05:06  [ AWT-EventQueue-0:256 ] - [ DEBUG ]  ==> Parameters: xxx(String), (String)
+2021-02-07 21:05:06  [ AWT-EventQueue-0:285 ] - [ DEBUG ]  <==      Total: 0
+2021-02-07 21:05:06  [ AWT-EventQueue-0:288 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@16d104f7]
+2021-02-07 21:05:06  [ AWT-EventQueue-0:288 ] - [ DEBUG ]  Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@16d104f7]
+2021-02-07 21:05:06  [ AWT-EventQueue-0:288 ] - [ DEBUG ]  Returned connection 382797047 to pool.
+2021-02-07 21:05:06  [ AWT-EventQueue-0:289 ] - [ ERROR ]  登陆失败
+2021-02-07 21:05:40  [ AWT-EventQueue-0:0 ] - [ DEBUG ]  Logging initialized using 'class org.apache.ibatis.logging.commons.JakartaCommonsLoggingImpl' adapter.
+2021-02-07 21:05:40  [ AWT-EventQueue-0:17 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-07 21:05:40  [ AWT-EventQueue-0:18 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-07 21:05:40  [ AWT-EventQueue-0:18 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-07 21:05:40  [ AWT-EventQueue-0:18 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-07 21:05:40  [ AWT-EventQueue-0:46 ] - [ INFO ]  连接到MySQL数据库
+2021-02-07 21:05:40  [ AWT-EventQueue-0:57 ] - [ DEBUG ]  Opening JDBC Connection
+2021-02-07 21:05:41  [ AWT-EventQueue-0:204 ] - [ DEBUG ]  Created connection 307401265.
+2021-02-07 21:05:41  [ AWT-EventQueue-0:205 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@12529231]
+2021-02-07 21:05:41  [ AWT-EventQueue-0:209 ] - [ DEBUG ]  ==>  Preparing: SELECT t_user.id FROM t_user WHERE t_user.username = ? AND t_user.`password` = ? 
+2021-02-07 21:05:41  [ AWT-EventQueue-0:246 ] - [ DEBUG ]  ==> Parameters: xxx(String), (String)
+2021-02-07 21:05:41  [ AWT-EventQueue-0:277 ] - [ DEBUG ]  <==      Total: 0
+2021-02-07 21:05:41  [ AWT-EventQueue-0:281 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@12529231]
+2021-02-07 21:05:41  [ AWT-EventQueue-0:281 ] - [ DEBUG ]  Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@12529231]
+2021-02-07 21:05:41  [ AWT-EventQueue-0:282 ] - [ DEBUG ]  Returned connection 307401265 to pool.
+2021-02-07 21:05:41  [ AWT-EventQueue-0:282 ] - [ ERROR ]  登陆失败
+2021-02-07 21:07:53  [ AWT-EventQueue-0:0 ] - [ DEBUG ]  Logging initialized using 'class org.apache.ibatis.logging.commons.JakartaCommonsLoggingImpl' adapter.
+2021-02-07 21:07:53  [ AWT-EventQueue-0:19 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-07 21:07:53  [ AWT-EventQueue-0:20 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-07 21:07:53  [ AWT-EventQueue-0:20 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-07 21:07:53  [ AWT-EventQueue-0:21 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-07 21:07:53  [ AWT-EventQueue-0:48 ] - [ INFO ]  连接到MySQL数据库
+2021-02-07 21:07:53  [ AWT-EventQueue-0:59 ] - [ DEBUG ]  Opening JDBC Connection
+2021-02-07 21:07:53  [ AWT-EventQueue-0:204 ] - [ DEBUG ]  Created connection 1443739198.
+2021-02-07 21:07:53  [ AWT-EventQueue-0:205 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@560db63e]
+2021-02-07 21:07:53  [ AWT-EventQueue-0:209 ] - [ DEBUG ]  ==>  Preparing: SELECT t_user.id FROM t_user WHERE t_user.username = ? AND t_user.`password` = ? 
+2021-02-07 21:07:53  [ AWT-EventQueue-0:247 ] - [ DEBUG ]  ==> Parameters: xxx(String), (String)
+2021-02-07 21:07:53  [ AWT-EventQueue-0:279 ] - [ DEBUG ]  <==      Total: 0
+2021-02-07 21:07:53  [ AWT-EventQueue-0:281 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@560db63e]
+2021-02-07 21:07:53  [ AWT-EventQueue-0:281 ] - [ DEBUG ]  Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@560db63e]
+2021-02-07 21:07:53  [ AWT-EventQueue-0:282 ] - [ DEBUG ]  Returned connection 1443739198 to pool.
+2021-02-07 21:07:53  [ AWT-EventQueue-0:282 ] - [ ERROR ]  登陆失败
+2021-02-07 21:11:03  [ main:0 ] - [ INFO ]  
+2021-02-07 21:11:41  [ main:0 ] - [ INFO ]  
+2021-02-07 21:11:49  [ AWT-EventQueue-0:7780 ] - [ DEBUG ]  Logging initialized using 'class org.apache.ibatis.logging.commons.JakartaCommonsLoggingImpl' adapter.
+2021-02-07 21:11:49  [ AWT-EventQueue-0:7799 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-07 21:11:49  [ AWT-EventQueue-0:7799 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-07 21:11:49  [ AWT-EventQueue-0:7800 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-07 21:11:49  [ AWT-EventQueue-0:7800 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-07 21:11:49  [ AWT-EventQueue-0:7828 ] - [ INFO ]  连接到MySQL数据库
+2021-02-07 21:11:49  [ AWT-EventQueue-0:7838 ] - [ DEBUG ]  Opening JDBC Connection
+2021-02-07 21:11:49  [ AWT-EventQueue-0:7987 ] - [ DEBUG ]  Created connection 349186119.
+2021-02-07 21:11:49  [ AWT-EventQueue-0:7987 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@14d02847]
+2021-02-07 21:11:49  [ AWT-EventQueue-0:7992 ] - [ DEBUG ]  ==>  Preparing: SELECT t_user.id FROM t_user WHERE t_user.username = ? AND t_user.`password` = ? 
+2021-02-07 21:11:49  [ AWT-EventQueue-0:8033 ] - [ DEBUG ]  ==> Parameters: xxx(String), tttt(String)
+2021-02-07 21:11:49  [ AWT-EventQueue-0:8069 ] - [ DEBUG ]  <==      Total: 1
+2021-02-07 21:11:49  [ AWT-EventQueue-0:8073 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@14d02847]
+2021-02-07 21:11:49  [ AWT-EventQueue-0:8073 ] - [ DEBUG ]  Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@14d02847]
+2021-02-07 21:11:49  [ AWT-EventQueue-0:8074 ] - [ DEBUG ]  Returned connection 349186119 to pool.
+2021-02-07 21:11:49  [ AWT-EventQueue-0:8075 ] - [ INFO ]  登陆成功
+2021-02-07 21:12:43  [ AWT-EventQueue-0:0 ] - [ DEBUG ]  Logging initialized using 'class org.apache.ibatis.logging.commons.JakartaCommonsLoggingImpl' adapter.
+2021-02-07 21:12:43  [ AWT-EventQueue-0:18 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-07 21:12:43  [ AWT-EventQueue-0:18 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-07 21:12:43  [ AWT-EventQueue-0:19 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-07 21:12:43  [ AWT-EventQueue-0:19 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-07 21:12:43  [ AWT-EventQueue-0:47 ] - [ INFO ]  连接到MySQL数据库
+2021-02-07 21:12:43  [ AWT-EventQueue-0:58 ] - [ DEBUG ]  Opening JDBC Connection
+2021-02-07 21:12:43  [ AWT-EventQueue-0:214 ] - [ DEBUG ]  Created connection 2135134618.
+2021-02-07 21:12:43  [ AWT-EventQueue-0:215 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@7f43919a]
+2021-02-07 21:12:43  [ AWT-EventQueue-0:220 ] - [ DEBUG ]  ==>  Preparing: SELECT t_user.id FROM t_user WHERE t_user.username = ? AND t_user.`password` = ? 
+2021-02-07 21:12:43  [ AWT-EventQueue-0:262 ] - [ DEBUG ]  ==> Parameters: xxx(String), (String)
+2021-02-07 21:12:43  [ AWT-EventQueue-0:294 ] - [ DEBUG ]  <==      Total: 0
+2021-02-07 21:12:43  [ AWT-EventQueue-0:296 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@7f43919a]
+2021-02-07 21:12:43  [ AWT-EventQueue-0:297 ] - [ DEBUG ]  Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@7f43919a]
+2021-02-07 21:12:43  [ AWT-EventQueue-0:297 ] - [ DEBUG ]  Returned connection 2135134618 to pool.
+2021-02-07 21:12:43  [ AWT-EventQueue-0:298 ] - [ ERROR ]  登陆失败
+2021-02-07 21:13:32  [ AWT-EventQueue-0:0 ] - [ DEBUG ]  Logging initialized using 'class org.apache.ibatis.logging.commons.JakartaCommonsLoggingImpl' adapter.
+2021-02-07 21:13:32  [ AWT-EventQueue-0:20 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-07 21:13:32  [ AWT-EventQueue-0:20 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-07 21:13:32  [ AWT-EventQueue-0:20 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-07 21:13:32  [ AWT-EventQueue-0:21 ] - [ DEBUG ]  PooledDataSource forcefully closed/removed all connections.
+2021-02-07 21:13:32  [ AWT-EventQueue-0:50 ] - [ INFO ]  连接到MySQL数据库
+2021-02-07 21:13:32  [ AWT-EventQueue-0:60 ] - [ DEBUG ]  Opening JDBC Connection
+2021-02-07 21:13:32  [ AWT-EventQueue-0:209 ] - [ DEBUG ]  Created connection 2141184758.
+2021-02-07 21:13:32  [ AWT-EventQueue-0:209 ] - [ DEBUG ]  Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@7f9fe2f6]
+2021-02-07 21:13:32  [ AWT-EventQueue-0:213 ] - [ DEBUG ]  ==>  Preparing: SELECT t_user.id FROM t_user WHERE t_user.username = ? AND t_user.`password` = ? 
+2021-02-07 21:13:32  [ AWT-EventQueue-0:252 ] - [ DEBUG ]  ==> Parameters: xxx(String), tttt(String)
+2021-02-07 21:13:32  [ AWT-EventQueue-0:283 ] - [ DEBUG ]  <==      Total: 1
+2021-02-07 21:13:32  [ AWT-EventQueue-0:286 ] - [ DEBUG ]  Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@7f9fe2f6]
+2021-02-07 21:13:32  [ AWT-EventQueue-0:287 ] - [ DEBUG ]  Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@7f9fe2f6]
+2021-02-07 21:13:32  [ AWT-EventQueue-0:287 ] - [ DEBUG ]  Returned connection 2141184758 to pool.
+2021-02-07 21:13:32  [ AWT-EventQueue-0:287 ] - [ INFO ]  登陆成功

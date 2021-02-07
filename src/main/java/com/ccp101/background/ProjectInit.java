@@ -1,6 +1,10 @@
 package com.ccp101.background;
 
-import org.apache.log4j.Logger;
+import com.ccp101.database.dao.DaoImpl;
+import com.ccp101.database.pojo.Product;
+import com.ccp101.database.pojo.User;
+
+import java.util.List;
 
 /**
  * @author: CCP101
@@ -8,8 +12,11 @@ import org.apache.log4j.Logger;
  * @create: 2021/2/7 13:55
  */
 public class ProjectInit {
-    private static Logger logger = Logger.getLogger(ProjectInit.class);
     public static void init(){
-
+        DaoImpl dao = new DaoImpl();
+        List<Product> productList = dao.productImport();
+        List<User> userList = dao.UserImport();
+        UserFunction userFunction =new UserFunction();
+        userFunction.userLogin("xxx","tttt");
     }
 }
