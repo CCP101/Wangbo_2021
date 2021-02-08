@@ -21,4 +21,10 @@ public interface UserDao {
     @Insert("INSERT INTO `shopping`.`t_user`(`id`, `username`, `password`, `phone`, `address`, `status`) " +
             "VALUES (#{id}, #{userName}, #{password}, #{phone}, #{address}, #{status})")
     void UserInsert(User user);
+
+    @Select("SELECT MAX(id) FROM t_user ")
+    Integer UserIndex();
+
+    @Select("SELECT t_user.username FROM t_user WHERE t_user.username = #{name} LIMIT 1")
+    String UserDuplicate(String name);
 }

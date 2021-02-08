@@ -20,10 +20,13 @@ import java.util.List;
  */
 public class DaoImpl implements ProductDao,UserDao{
 
-    private static Logger logger = Logger.getLogger(DaoImpl.class);
+    private static final Logger logger = Logger.getLogger(DaoImpl.class);
     private InputStream in;
     private SqlSession session;
 
+    /** MySQL连接
+     *
+     */
     private void initSession() {
         try {
             in = Resources.getResourceAsStream("mybatis-config.xml");
@@ -65,6 +68,10 @@ public class DaoImpl implements ProductDao,UserDao{
         return list;
     }
 
+    /** 用户登录
+     * @param user User对象
+     * @return 返回下标号
+     */
     @Override
     public Integer UserLogin(User user) {
         initSession();
@@ -74,19 +81,46 @@ public class DaoImpl implements ProductDao,UserDao{
         return id;
     }
 
+    /** 向t_user表中插入一个新用户
+     * @param user 传入User对象加入数据库
+     * @throws PersistenceException 向上抛出SQL异常
+     */
     @Override
     public void UserInsert(User user) throws PersistenceException {
         initSession();
         UserDao dao = session.getMapper(UserDao.class);
-        try{
-            dao.UserInsert(user);
-            logger.info("注册成功");
-        }
-        catch (PersistenceException e){
-            logger.error("存在重复用户名，注册失败");
-        }finally {
-            session.commit();
-            closeAll();
+        dao.UserInsert(user);
+        logger.info("注册成功");
+        session.commit();
+        closeAll();
+    }
+
+    /** 获得新插入对象的下标
+     * @return 返回新的下标
+     */
+    @Override
+    public Integer UserIndex() {
+        initSession();
+        UserDao dao = session.getMapper(UserDao.class);
+        Integer id = dao.UserIndex();
+        if (id==null) id = 0;
+        closeAll();
+        return id+1;
+    }
+
+    /**检查是否存在重复的用户名
+     * @param name 待插入的用户名
+     * @return true为已经存在该用户名
+     */
+    @Override
+    public String UserDuplicate(String name) {
+        initSession();
+        UserDao dao = session.getMapper(UserDao.class);
+        String nameGet = dao.UserDuplicate(name);
+        if (nameGet!=null){
+            return "true";
+        }else{
+            return "false";
         }
     }
 }
