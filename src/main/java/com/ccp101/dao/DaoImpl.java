@@ -1,7 +1,7 @@
-package com.ccp101.database.dao;
+package com.ccp101.dao;
 
-import com.ccp101.database.pojo.Product;
-import com.ccp101.database.pojo.User;
+import com.ccp101.pojo.Product;
+import com.ccp101.pojo.User;
 import org.apache.ibatis.exceptions.PersistenceException;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
@@ -39,6 +39,9 @@ public class DaoImpl implements ProductDao,UserDao{
         }
     }
 
+    /**关闭MySQL连接
+     *
+     */
     private void closeAll() {
         try {
             session.close();
@@ -50,20 +53,18 @@ public class DaoImpl implements ProductDao,UserDao{
 
     @Override
     public List<Product> productImport() {
-        List<Product> list = null;
         initSession();
         ProductDao dao = session.getMapper(ProductDao.class);
-        list = dao.productImport();
+        List<Product>  list = dao.productImport();
         closeAll();
         return list;
     }
 
     @Override
     public List<User> UserImport() {
-        List<User> list = null;
         initSession();
         UserDao dao = session.getMapper(UserDao.class);
-        list = dao.UserImport();
+        List<User> list = dao.UserImport();
         closeAll();
         return list;
     }

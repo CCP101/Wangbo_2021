@@ -15,9 +15,9 @@
     </environments>
 
     <mappers>
-        <mapper class="com.ccp101.database.dao.ProductDao"/>
-        <mapper class="com.ccp101.database.dao.UserDao"/>
-        <mapper class="com.ccp101.database.dao.ItemDao"/>
-        <mapper class="com.ccp101.database.dao.OrderDao"/>
+        <mapper class="com.ccp101.dao.ProductDao"/>
+        <mapper class="com.ccp101.dao.UserDao"/>
+        <mapper class="com.ccp101.dao.ItemDao"/>
+        <mapper class="com.ccp101.dao.OrderDao"/>
     </mappers>
 </configuration>

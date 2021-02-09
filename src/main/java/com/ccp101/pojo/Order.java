@@ -1,4 +1,4 @@
-package com.ccp101.database.pojo;
+package com.ccp101.pojo;
 
 import java.util.Date;
 

@@ -1,7 +1,8 @@
 package com.ccp101.background;
 
-import com.ccp101.database.dao.DaoImpl;
-import com.ccp101.database.pojo.User;
+import com.ccp101.dao.DaoImpl;
+import com.ccp101.gui.UserInterface;
+import com.ccp101.pojo.User;
 import org.apache.ibatis.exceptions.PersistenceException;
 import org.apache.log4j.Logger;
 
@@ -23,7 +24,7 @@ public class UserFunction {
      * @param pwd  用户密码
      * @param panel 界面
      */
-    public void userLogin(String name, String pwd, JPanel panel){
+    public void userLogin(String name, String pwd,JFrame frame, JPanel panel){
         if(checkLegal(name, pwd, panel)) return;
         User test = new User();
         test.setUserName(name);
@@ -32,20 +33,23 @@ public class UserFunction {
         //传入临时User对象交给MyBaits
         Integer result = dao.UserLogin(test);
         int num = Objects.requireNonNullElse(result, 0);
-        //结果为0说明不存在匹配用户即登陆失败
-        if (num!=0){
-            logger.info("登陆成功");
-            JOptionPane.showMessageDialog(panel,"登陆成功");
-        }else {
-            logger.error("登陆失败");
-            JOptionPane.showMessageDialog(panel,"登陆失败,账户或密码错误！");
-        }
         //清空输入框内容
         for (int i = 0; i < panel.getComponentCount(); i++) {
             Object obj = panel.getComponent(i);
             if (obj instanceof JTextField) {
                 ((JTextField) obj).setText("");
             }
+        }
+        //结果为0说明不存在匹配用户即登陆失败
+        if (num!=0){
+            logger.info("登陆成功");
+            JOptionPane.showMessageDialog(panel,"登陆成功");
+            frame.dispose();
+            UserInterface newGui = new UserInterface();
+            newGui.UserGUI();
+        }else {
+            logger.error("登陆失败");
+            JOptionPane.showMessageDialog(panel,"登陆失败！");
         }
     }
 
@@ -81,6 +85,7 @@ public class UserFunction {
         String pwdEncrypt = AES.encrypt(name, secretKey);
         test.setPassword(pwdEncrypt);
         test.setId(dao.UserIndex());
+        test.setStatus(true);
         try{
             dao.UserInsert(test);
             logger.info("注册成功");

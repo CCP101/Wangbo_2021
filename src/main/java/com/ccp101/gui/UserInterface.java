@@ -1,25 +1,24 @@
-package com.ccp101;
+package com.ccp101.gui;
 
-import com.ccp101.gui.LoginInterface;
 import com.formdev.flatlaf.intellijthemes.materialthemeuilite.FlatAtomOneLightIJTheme;
 
 import javax.swing.*;
 
-/**
+/** 登陆后创建新的界面
  * @author: CCP101
  * @version: v1.0
- * @create: 2021/2/7 15:02
+ * @create: 2021/2/9 09:16
  */
-public class MainRun {
-    public static void main(String[] args) {
+public class UserInterface {
+    public void UserGUI(){
         FlatAtomOneLightIJTheme.install();
         JFrame frame = new JFrame("超市管理系统");
-        frame.setSize(700, 400);
+        frame.setSize(1000, 700);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         JPanel panel = new JPanel();
         frame.add(panel);
-        LoginInterface loginInterface = new LoginInterface();
-        loginInterface.placeComponents(frame,panel);
+        MenuBar menu = new MenuBar();
+        menu.menu(frame);
         frame.setLocationRelativeTo(null);
         frame.setVisible(true);
     }

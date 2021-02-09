@@ -1,8 +1,8 @@
 package com.ccp101.background;
 
-import com.ccp101.database.dao.DaoImpl;
-import com.ccp101.database.pojo.Product;
-import com.ccp101.database.pojo.User;
+import com.ccp101.dao.DaoImpl;
+import com.ccp101.pojo.Product;
+import com.ccp101.pojo.User;
 
 import java.util.List;
 

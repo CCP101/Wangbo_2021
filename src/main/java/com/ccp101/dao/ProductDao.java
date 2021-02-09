@@ -1,6 +1,6 @@
-package com.ccp101.database.dao;
+package com.ccp101.dao;
 
-import com.ccp101.database.pojo.Product;
+import com.ccp101.pojo.Product;
 import org.apache.ibatis.annotations.Select;
 
 import java.util.List;

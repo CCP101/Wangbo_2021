@@ -1,6 +1,6 @@
-package com.ccp101.database.dao;
+package com.ccp101.dao;
 
-import com.ccp101.database.pojo.User;
+import com.ccp101.pojo.User;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Select;
 
@@ -15,7 +15,8 @@ public interface UserDao {
     @Select("SELECT t_user.id,t_user.username,t_user.`password`,t_user.address FROM t_user")
     List<User> UserImport();
 
-    @Select("SELECT t_user.id FROM t_user WHERE t_user.username = #{userName} AND t_user.`password` = #{password}")
+    @Select("SELECT t_user.id FROM t_user WHERE t_user.username = #{userName} AND t_user.`password` = #{password} " +
+            "AND t_user.`status` = 1")
     Integer UserLogin(User user);
 
     @Insert("INSERT INTO `shopping`.`t_user`(`id`, `username`, `password`, `phone`, `address`, `status`) " +
