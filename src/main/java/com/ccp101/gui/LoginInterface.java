@@ -3,6 +3,8 @@ package com.ccp101.gui;
 import com.ccp101.background.UserFunction;
 
 import javax.swing.*;
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
 
 /**
  * @author: CCP101
@@ -43,5 +45,15 @@ public class LoginInterface {
         registerButton.setBounds(375, 200, 80, 25);
         panel.add(registerButton);
         registerButton.addActionListener(e -> userFunction.userRegister(userText.getText(), new String(passwordText.getPassword()),panel));
+        //密码输入框监听回车
+        passwordText.addKeyListener(new KeyAdapter() {
+            @Override
+            public void keyTyped(KeyEvent e) {
+                super.keyTyped(e);
+                if (e.getKeyChar() == KeyEvent.VK_ENTER) {
+                    loginButton.doClick();
+                }
+            }
+        });
     }
 }

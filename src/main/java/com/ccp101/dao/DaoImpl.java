@@ -124,4 +124,26 @@ public class DaoImpl implements ProductDao,UserDao{
             return "false";
         }
     }
+
+    /**获取登录用户信息
+     * @param index 用户ID
+     * @return 返回User类对象
+     */
+    @Override
+    public User UserGet(Integer index) {
+        initSession();
+        UserDao dao = session.getMapper(UserDao.class);
+        User loginUser = dao.UserGet(index);
+        closeAll();
+        return loginUser;
+    }
+
+    @Override
+    public void changePwd(User user) {
+        initSession();
+        UserDao dao = session.getMapper(UserDao.class);
+        dao.changePwd(user);
+        session.commit();
+        closeAll();
+    }
 }

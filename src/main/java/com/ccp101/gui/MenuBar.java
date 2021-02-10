@@ -86,7 +86,6 @@ public class MenuBar {
     private void aboutSystem() {
         JFrame frame = new JFrame("关于系统");
         frame.setSize(500, 400);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         JPanel panel = new JPanel();
         frame.add(panel);
         AboutSystem about = new AboutSystem();

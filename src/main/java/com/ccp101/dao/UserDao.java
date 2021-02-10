@@ -3,6 +3,7 @@ package com.ccp101.dao;
 import com.ccp101.pojo.User;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Select;
+import org.apache.ibatis.annotations.Update;
 
 import java.util.List;
 
@@ -28,4 +29,11 @@ public interface UserDao {
 
     @Select("SELECT t_user.username FROM t_user WHERE t_user.username = #{name} LIMIT 1")
     String UserDuplicate(String name);
+
+    @Select("SELECT t_user.id,t_user.username,t_user.`password`,t_user.phone,t_user.address,t_user.`status` " +
+            "FROM t_user WHERE t_user.id = #{index}")
+    User UserGet(Integer index);
+
+    @Update("UPDATE t_user SET `password` = #{password} WHERE `id` = #{id}")
+    void changePwd(User user);
 }

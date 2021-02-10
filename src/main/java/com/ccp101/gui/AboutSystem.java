@@ -27,12 +27,11 @@ public class AboutSystem {
                 "limitations under the License.<br><br>\n" + "        "+
                 "工具列表：<br>\n" + "    SQL：MyBatis<br>\n" + "    " +
                 "GUI：FlatLaf<br>\n" + "    POM：Maven<br>\n" + "    LOG：log4j<br>\n" + "</html>");
+        //JLabel支持HTML语言
         license.setBounds(20,20,400,200);
         panel.add(license);
         JButton exit = new JButton("确认");
-        exit.addActionListener(e->{
-            frame.dispose();
-        });
+        exit.addActionListener(e-> frame.dispose());
         panel.add(exit);
     }
 }

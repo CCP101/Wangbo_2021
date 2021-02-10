@@ -13,12 +13,12 @@ import java.util.List;
  */
 public class ProjectData {
     private List<Product> productList = null;
-    private List<User> userList = null;
+    private User user = null;
 
-    public void init(){
+    public void init(int num){
         DaoImpl dao = new DaoImpl();
         productList = dao.productImport();
-        userList = dao.UserImport();
+        user = dao.UserGet(num);
     }
 
     public List<Product> getProductList() {
@@ -29,11 +29,11 @@ public class ProjectData {
         this.productList = productList;
     }
 
-    public List<User> getUserList() {
-        return userList;
+    public User getUser() {
+        return user;
     }
 
-    public void setUserList(List<User> userList) {
-        this.userList = userList;
+    public void setUser(User user) {
+        this.user = user;
     }
 }

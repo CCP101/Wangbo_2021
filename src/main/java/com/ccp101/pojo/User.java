@@ -60,4 +60,9 @@ public class User {
     public void setStatus(boolean status) {
         this.status = status;
     }
+
+    @Override
+    public String toString() {
+        return "User{" + "id=" + id + ", userName='" + userName + '\'' + ", password='" + password + '\'' + ", phone='" + phone + '\'' + ", address='" + address + '\'' + ", status=" + status + '}';
+    }
 }

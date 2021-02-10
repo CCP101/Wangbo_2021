@@ -3,6 +3,7 @@ package com.ccp101.background;
 import com.ccp101.dao.DaoImpl;
 import com.ccp101.gui.UserInterface;
 import com.ccp101.pojo.User;
+import com.ccp101.util.AES;
 import org.apache.ibatis.exceptions.PersistenceException;
 import org.apache.log4j.Logger;
 
@@ -16,8 +17,8 @@ import java.util.Objects;
  */
 public class UserFunction {
     DaoImpl dao = new DaoImpl();
-    final String secretKey = "YMY"; //加密密匙
-    private static final Logger logger = Logger.getLogger(DaoImpl.class);
+    private static final String secretKey = "YMY"; //加密密匙
+    private static final Logger logger = Logger.getLogger(UserFunction.class);
 
     /**用户登录
      * @param name 用户名
@@ -28,7 +29,7 @@ public class UserFunction {
         if(checkLegal(name, pwd, panel)) return;
         User test = new User();
         test.setUserName(name);
-        String pwdEncrypt = AES.encrypt(name, secretKey);
+        String pwdEncrypt = AES.encrypt(pwd, secretKey);
         test.setPassword(pwdEncrypt);
         //传入临时User对象交给MyBaits
         Integer result = dao.UserLogin(test);
@@ -46,7 +47,7 @@ public class UserFunction {
             JOptionPane.showMessageDialog(panel,"登陆成功");
             frame.dispose();
             UserInterface newGui = new UserInterface();
-            newGui.UserGUI();
+            newGui.UserGUI(num);
         }else {
             logger.error("登陆失败");
             JOptionPane.showMessageDialog(panel,"登陆失败！");
@@ -64,7 +65,8 @@ public class UserFunction {
         //二次确认密码检查
         JPasswordField pf = new JPasswordField();
         //弹出密码输入框解决方案，https://stackoverflow.com/questions/8881213/
-        int okCxl = JOptionPane.showConfirmDialog(null, pf, "确认密码", JOptionPane.OK_CANCEL_OPTION, JOptionPane.PLAIN_MESSAGE);
+        int okCxl = JOptionPane.showConfirmDialog(null, pf, "确认密码",
+                JOptionPane.OK_CANCEL_OPTION, JOptionPane.PLAIN_MESSAGE);
         if (okCxl == JOptionPane.OK_OPTION) {
             String password = new String(pf.getPassword());
             if (!pwd.equals(password)){
@@ -82,7 +84,7 @@ public class UserFunction {
         //添加用户
         User test = new User();
         test.setUserName(name);
-        String pwdEncrypt = AES.encrypt(name, secretKey);
+        String pwdEncrypt = AES.encrypt(pwd, secretKey);
         test.setPassword(pwdEncrypt);
         test.setId(dao.UserIndex());
         test.setStatus(true);
@@ -139,5 +141,33 @@ public class UserFunction {
         }else{
             return false;
         }
+    }
+
+    public int modifyPwd(String pwd, String s1, String s2,User user) {
+        String pwdEncrypt = AES.encrypt(pwd, secretKey);
+        if (pwdEncrypt != null) {
+            if (pwdEncrypt.equals(user.getPassword())){
+                if (!(s1.equals("")||s2.equals(""))){
+                    if (s1.equals(s2)){
+                        pwdEncrypt = AES.encrypt(s1,secretKey);
+                        user.setPassword(pwdEncrypt);
+                        dao.changePwd(user);
+                        logger.info("修改密码成功");
+                        return 4;
+                    }else{
+                        logger.error("新密码不一致");
+                        return 3;
+                    }
+                }else{
+                    logger.error("新密码为空");
+                    return 2;
+                }
+            }else{
+                logger.error("旧密码错误");
+                return 1;
+            }
+        }
+        logger.error("旧密码错误");
+        return 1;
     }
 }
