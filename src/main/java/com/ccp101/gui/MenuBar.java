@@ -12,10 +12,12 @@ import javax.swing.*;
  * @create: 2021/2/9 9:11
  */
 public class MenuBar {
-    /**实现工具栏各类子功能
+    /**
+     * 实现工具栏各类子功能
+     *
      * @param jf 界面添加工具栏
      */
-    public void menu(JFrame jf){
+    public void menu(JFrame jf) {
         JMenuBar menuBar = new JMenuBar();
 
         JMenu fileMenu = new JMenu("文件");
@@ -60,19 +62,19 @@ public class MenuBar {
 
         //状态改变监听器 λ表达式
         radioButtonMenuItem01.addChangeListener(e -> {
-            if (radioButtonMenuItem01.isSelected()){
+            if (radioButtonMenuItem01.isSelected()) {
                 FlatAtomOneLightIJTheme.install();
                 FlatAtomOneLightIJTheme.updateUI();
             }
         });
         radioButtonMenuItem02.addChangeListener(e -> {
-            if (radioButtonMenuItem02.isSelected()){
+            if (radioButtonMenuItem02.isSelected()) {
                 FlatAtomOneDarkIJTheme.install();
                 FlatAtomOneDarkIJTheme.updateUI();
             }
         });
         radioButtonMenuItem03.addChangeListener(e -> {
-            if (radioButtonMenuItem03.isSelected()){
+            if (radioButtonMenuItem03.isSelected()) {
                 FlatGitHubIJTheme.install();
                 FlatGitHubIJTheme.updateUI();
             }
@@ -83,13 +85,33 @@ public class MenuBar {
         jf.setVisible(true);
     }
 
-    private void aboutSystem() {
+    /**
+     * 创建一个新页面显示的打印许可证和相关信息
+     */
+    public void aboutSystem() {
         JFrame frame = new JFrame("关于系统");
         frame.setSize(500, 400);
         JPanel panel = new JPanel();
         frame.add(panel);
-        AboutSystem about = new AboutSystem();
-        about.aboutMe(frame,panel);
+        //Apache 2.0 license
+        JLabel license = new JLabel("<html>\n" + "                " + "Copyright [2021] [CCP101]<br><br>\n" + "        "
+                + "Licensed under the Apache License, Version 2.0 (the \"License\");<br>\n" + "        "
+                + "you may not use this file except in compliance with the License.<br>\n" + "        "
+                + "You may obtain a copy of the License at<br><br>\n" + "        "
+                + "http://www.apache.org/licenses/LICENSE-2.0<br><br>\n" + "                "
+                + "Unless required by applicable law or agreed to in writing, software<br>\n" + "        "
+                + "distributed under the License is distributed on an \"AS IS\" BASIS,<br>\n" + "        "
+                + "WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.<br>\n" + "        "
+                + "See the License for the specific language governing permissions and<br>\n" + "        "
+                + "limitations under the License.<br><br>\n" + "        " + "工具列表：<br>\n"
+                + "    SQL：MyBatis<br>\n" + "    " + "GUI：FlatLaf<br>\n" + "    POM：Maven<br>\n"
+                + "    LOG：log4j<br>\n" + "</html>");
+        //JLabel支持HTML语言
+        license.setBounds(20, 20, 400, 200);
+        panel.add(license);
+        JButton exit = new JButton("确认");
+        exit.addActionListener(e -> frame.dispose());
+        panel.add(exit);
         frame.setLocationRelativeTo(null);
         frame.setVisible(true);
     }

@@ -15,7 +15,7 @@ public class ProjectData {
     private List<Product> productList = null;
     private User user = null;
 
-    public void init(int num){
+    public void init(int num) {
         DaoImpl dao = new DaoImpl();
         productList = dao.productImport();
         user = dao.UserGet(num);

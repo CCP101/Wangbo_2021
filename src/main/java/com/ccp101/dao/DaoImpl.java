@@ -18,14 +18,14 @@ import java.util.List;
  * @version: v1.0
  * @create: 2021/2/7 15:57
  */
-public class DaoImpl implements ProductDao,UserDao{
+public class DaoImpl implements ProductDao, UserDao {
 
     private static final Logger logger = Logger.getLogger(DaoImpl.class);
     private InputStream in;
     private SqlSession session;
 
-    /** MySQL连接
-     *
+    /**
+     * MySQL连接
      */
     private void initSession() {
         try {
@@ -39,8 +39,8 @@ public class DaoImpl implements ProductDao,UserDao{
         }
     }
 
-    /**关闭MySQL连接
-     *
+    /**
+     * 关闭MySQL连接
      */
     private void closeAll() {
         try {
@@ -55,7 +55,7 @@ public class DaoImpl implements ProductDao,UserDao{
     public List<Product> productImport() {
         initSession();
         ProductDao dao = session.getMapper(ProductDao.class);
-        List<Product>  list = dao.productImport();
+        List<Product> list = dao.productImport();
         closeAll();
         return list;
     }
@@ -69,7 +69,9 @@ public class DaoImpl implements ProductDao,UserDao{
         return list;
     }
 
-    /** 用户登录
+    /**
+     * 用户登录
+     *
      * @param user User对象
      * @return 返回下标号
      */
@@ -82,7 +84,9 @@ public class DaoImpl implements ProductDao,UserDao{
         return id;
     }
 
-    /** 向t_user表中插入一个新用户
+    /**
+     * 向t_user表中插入一个新用户
+     *
      * @param user 传入User对象加入数据库
      * @throws PersistenceException 向上抛出SQL异常
      */
@@ -96,7 +100,9 @@ public class DaoImpl implements ProductDao,UserDao{
         closeAll();
     }
 
-    /** 获得新插入对象的下标
+    /**
+     * 获得新插入对象的下标
+     *
      * @return 返回新的下标
      */
     @Override
@@ -104,12 +110,16 @@ public class DaoImpl implements ProductDao,UserDao{
         initSession();
         UserDao dao = session.getMapper(UserDao.class);
         Integer id = dao.UserIndex();
-        if (id==null) id = 0;
+        if (id == null) {
+            id = 0;
+        }
         closeAll();
-        return id+1;
+        return id + 1;
     }
 
-    /**检查是否存在重复的用户名
+    /**
+     * 检查是否存在重复的用户名
+     *
      * @param name 待插入的用户名
      * @return true为已经存在该用户名
      */
@@ -118,14 +128,16 @@ public class DaoImpl implements ProductDao,UserDao{
         initSession();
         UserDao dao = session.getMapper(UserDao.class);
         String nameGet = dao.UserDuplicate(name);
-        if (nameGet!=null){
+        if (nameGet != null) {
             return "true";
-        }else{
+        } else {
             return "false";
         }
     }
 
-    /**获取登录用户信息
+    /**
+     * 获取登录用户信息
+     *
      * @param index 用户ID
      * @return 返回User类对象
      */
