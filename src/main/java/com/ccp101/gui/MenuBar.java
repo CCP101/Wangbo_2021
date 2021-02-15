@@ -90,7 +90,7 @@ public class MenuBar {
      */
     public void aboutSystem() {
         JFrame frame = new JFrame("关于系统");
-        frame.setSize(500, 400);
+        frame.setSize(500, 450);
         JPanel panel = new JPanel();
         frame.add(panel);
         //Apache 2.0 license
@@ -104,8 +104,8 @@ public class MenuBar {
                 + "WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.<br>\n" + "        "
                 + "See the License for the specific language governing permissions and<br>\n" + "        "
                 + "limitations under the License.<br><br>\n" + "        " + "工具列表：<br>\n"
-                + "    SQL：MyBatis<br>\n" + "    " + "GUI：FlatLaf<br>\n" + "    POM：Maven<br>\n"
-                + "    LOG：log4j<br>\n" + "</html>");
+                + "    数据库连接：MyBatis<br>\n" + "    " + "界面设计库：FlatLaf<br>\n" + "    项目管理工具：Maven<br>\n"
+                + "    日志管理：log4j<br>\n" + "    " + "代码版本控制工具：Git<br>\n" + "</html>");
         //JLabel支持HTML语言
         license.setBounds(20, 20, 400, 200);
         panel.add(license);

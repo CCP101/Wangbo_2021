@@ -22,7 +22,6 @@ public class UserInterface {
         FlatAtomOneLightIJTheme.install();
         ProjectData data = new ProjectData();
         data.init(num);
-        System.out.println(data.getUser().toString());
         JFrame frame = new JFrame("超市管理系统");
         frame.setSize(1000, 700);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -60,7 +59,10 @@ public class UserInterface {
      */
     public void operating(JFrame frame, JPanel panelButton, JPanel panel, ProjectData data) {
 
-        AccountSetting accountSetting = new AccountSetting();
+        ProductGUI productGUI = new ProductGUI();
+        CartGUI cartGUI = new CartGUI();
+        AccountGUI accountGUI = new AccountGUI();
+
         panelButton.setLayout(null);
         JButton showButton = new JButton("商品选择");
         showButton.setBounds(20, 70, 100, 40);
@@ -75,6 +77,8 @@ public class UserInterface {
         userButton.setBounds(20, 490, 100, 40);
         panelButton.add(userButton);
 
-        userButton.addActionListener(e -> accountSetting.accountGui(frame, panel, data));
+        showButton.addActionListener(e -> productGUI.selectProduct(frame, panel, data));
+        shoppingButton.addActionListener(e -> cartGUI.cartSetting(frame, panel, data));
+        userButton.addActionListener(e -> accountGUI.accountGui(frame, panel, data));
     }
 }

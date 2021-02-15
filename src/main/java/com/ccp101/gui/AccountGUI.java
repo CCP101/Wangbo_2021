@@ -13,8 +13,8 @@ import java.awt.*;
  * @version: v1.0
  * @create: 2021/2/10 10:13
  */
-public class AccountSetting {
-    private static final Logger logger = Logger.getLogger(AccountSetting.class);
+public class AccountGUI {
+    private static final Logger logger = Logger.getLogger(AccountGUI.class);
 
     /**
      * 主窗口设置用户管理模块
@@ -26,7 +26,6 @@ public class AccountSetting {
     public void accountGui(JFrame frame, JPanel panel, ProjectData data) {
         panel.removeAll();
         panel.setLayout(null);
-        //        UserFunction userFunction = new UserFunction();
         JButton passwordButton = new JButton("更改密码");
         passwordButton.setBounds(200, 490, 100, 40);
         panel.add(passwordButton);
