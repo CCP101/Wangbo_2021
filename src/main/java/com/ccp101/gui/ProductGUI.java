@@ -73,6 +73,6 @@ public class ProductGUI {
             }
         });
         TableSetting setting = new TableSetting();
-        setting.setting(table,panel);
+        setting.setting(table, panel);
     }
 }

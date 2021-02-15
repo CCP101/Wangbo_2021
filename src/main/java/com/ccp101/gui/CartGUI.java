@@ -85,12 +85,8 @@ public class CartGUI {
             int firstRow = e.getFirstRow();
             int lastRow = e.getLastRow();
             int column = e.getColumn();
-            // 事件的类型，可能的值有:
-            //     TableModelEvent.INSERT   新行或新列的添加
-            //     TableModelEvent.UPDATE   现有数据的更改
-            //     TableModelEvent.DELETE   有行或列被移除
             if (e.getType() == TableModelEvent.UPDATE) {
-                if (column != 4) {
+                if (column != 4 || firstRow == rowData.length - 1) {
                     return;
                 }
                 for (int row = firstRow; row <= lastRow; row++) {
@@ -98,10 +94,8 @@ public class CartGUI {
                         int id = Integer.parseInt(tableModel.getValueAt(row, 2).toString());
                         double price = Double.parseDouble(tableModel.getValueAt(row, 3).toString());
                         int num = Integer.parseInt(tableModel.getValueAt(row, 4).toString());
-                        tempCart.remove(id);
                         tempCart.put(id, num);
-                        cart.remove(id);
-                        cart.put(id,num);
+                        cart.put(id, num);
                         double total = price * num;
                         tableModel.setValueAt(total, row, 5);
                         int numSum = 0;
@@ -118,27 +112,63 @@ public class CartGUI {
                 }
             }
         });
-        TableSetting setting = new TableSetting();
+
         table.addMouseListener(new MouseAdapter() {
             /** 双击弹窗确认是否从购物车中删除
              * @param e 鼠标操作
              */
             public void mouseClicked(MouseEvent e) {
                 if (e.getClickCount() == 2) {
-//                    int selectedRow = table.getSelectedRow();
-//                    logger.info("选中" + selectedRow);
-//                    int result = JOptionPane.showConfirmDialog(frame, "是否加入购物车", "提示", JOptionPane.YES_NO_CANCEL_OPTION);
-//                    logger.info("选择" + result);
-//                    if (result == 0) {
-//                        if (tempCart.get(selectedRow + 1) == 0) {
-//                            JOptionPane.showMessageDialog(frame, "加入成功！", "消息提示", JOptionPane.INFORMATION_MESSAGE);
-//                        } else {
-//                            JOptionPane.showMessageDialog(frame, "已在购物车中！", "消息提示", JOptionPane.ERROR_MESSAGE);
-//                        }
-//                    }
+                    int selectedRow = table.getSelectedRow();
+                    if (selectedRow == rowData.length - 1) {
+                        return;
+                    }
+                    int result = JOptionPane.showConfirmDialog(frame, "是否从购物车中移除", "提示", JOptionPane.YES_NO_CANCEL_OPTION);
+                    if (result == 0) {
+                        int j = 0;
+                        Integer remove = 0;
+                        for (Integer integer : tempCart.keySet()) {
+                            if (j == selectedRow) {
+                                remove = integer;
+                            }
+                            j++;
+                        }
+                        tempCart.remove(remove);
+
+                        cart.put(remove, 0);
+                        logger.info("删除" + remove);
+                        JOptionPane.showMessageDialog(frame, "删除成功！", "消息提示", JOptionPane.INFORMATION_MESSAGE);
+                        cartSetting(frame, panel, data);
+                    }
                 }
             }
         });
+        JButton clearButton = new JButton("清空购物车");
+        clearButton.setBounds(200, 490, 100, 40);
+        panel.add(clearButton);
+
+        JButton submitButton = new JButton("购物车结算");
+        submitButton.setBounds(450, 490, 100, 40);
+        panel.add(submitButton);
+
+        clearButton.addActionListener(e -> {
+            int result = JOptionPane.showConfirmDialog(frame, "是否清空购物车", "提示", JOptionPane.YES_NO_CANCEL_OPTION);
+            if (result == 0) {
+                for (Integer integer : cart.keySet()) {
+                    if (cart.get(integer) != 0) {
+                        cart.put(integer, 0);
+                    }
+                }
+                JOptionPane.showMessageDialog(frame, "清空成功！", "消息提示", JOptionPane.INFORMATION_MESSAGE);
+                cartSetting(frame, panel, data);
+            }
+        });
+
+        submitButton.addActionListener(e -> {
+
+        });
+
+        TableSetting setting = new TableSetting();
         setting.setting(table, panel);
     }
 
