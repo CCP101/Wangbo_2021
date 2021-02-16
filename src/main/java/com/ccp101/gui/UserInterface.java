@@ -61,6 +61,7 @@ public class UserInterface {
 
         ProductGUI productGUI = new ProductGUI();
         CartGUI cartGUI = new CartGUI();
+        OrderGUI orderGUI = new OrderGUI();
         AccountGUI accountGUI = new AccountGUI();
 
         panelButton.setLayout(null);
@@ -79,6 +80,7 @@ public class UserInterface {
 
         showButton.addActionListener(e -> productGUI.selectProduct(frame, panel, data));
         shoppingButton.addActionListener(e -> cartGUI.cartSetting(frame, panel, data));
+        orderButton.addActionListener(e -> orderGUI.orderSetting(panel, data));
         userButton.addActionListener(e -> accountGUI.accountGui(frame, panel, data));
     }
 }

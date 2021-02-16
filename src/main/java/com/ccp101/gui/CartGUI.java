@@ -92,6 +92,7 @@ public class CartGUI {
                 fireTableCellUpdated(rowIndex, columnIndex);
             }
         });
+
         final TableModel tableModel = table.getModel();
         tableModel.addTableModelListener(e -> {
             int firstRow = e.getFirstRow();
@@ -155,6 +156,7 @@ public class CartGUI {
                 }
             }
         });
+
         JButton clearButton = new JButton("清空购物车");
         clearButton.setBounds(200, 490, 100, 40);
         panel.add(clearButton);
@@ -187,7 +189,7 @@ public class CartGUI {
                 Date date = new Date();
                 String dateString = dateFormat.format(date);
                 order.setId(id);
-                order.setUserId(user.getId());
+                order.setUser_id(user.getId());
                 order.setNo(orderId);
                 order.setPrice(price);
                 try {
@@ -198,16 +200,16 @@ public class CartGUI {
                 }
                 dao.orderWrite(order);
                 for (Integer integer : tempCart.keySet()) {
-                    Product product = productList.get(integer-1);
+                    Product product = productList.get(integer - 1);
                     Integer num = tempCart.get(integer);
                     int idItem = dao.itemIndex();
                     double priceSum = product.getPrice() * num;
                     Item item = new Item();
                     item.setId(idItem);
-                    item.setProductId(integer);
+                    item.setProduct_id(integer);
                     item.setNum(num);
                     item.setPrice(priceSum);
-                    item.setOrderId(id);
+                    item.setOrder_id(id);
                     dao.itemWrite(item);
                 }
                 for (Integer integer : cart.keySet()) {
@@ -221,7 +223,7 @@ public class CartGUI {
         });
 
         TableSetting setting = new TableSetting();
-        setting.setting(table, panel);
+        setting.setting(table, panel, true);
     }
 
     public Object[][] generateData(HashMap<Integer, Integer> tempCart, List<Product> productList) {

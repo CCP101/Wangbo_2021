@@ -202,6 +202,19 @@ public class DaoImpl implements ProductDao, UserDao, OrderDao, ItemDao {
         return id + 1;
     }
 
+    /** 获取用户订单
+     * @param userId 用户ID
+     * @return 返回当前用户下的所有订单
+     */
+    @Override
+    public List<Order> getOrder(Integer userId) {
+        initSession();
+        OrderDao dao = session.getMapper(OrderDao.class);
+        List<Order> userOrder = dao.getOrder(userId);
+        closeAll();
+        return userOrder;
+    }
+
     /**
      * 从数据库获取下一个订单详情下表
      *
@@ -231,5 +244,14 @@ public class DaoImpl implements ProductDao, UserDao, OrderDao, ItemDao {
         dao.itemWrite(item);
         session.commit();
         closeAll();
+    }
+
+    @Override
+    public List<Item> itemQuery(Integer orderId) {
+        initSession();
+        ItemDao dao = session.getMapper(ItemDao.class);
+        List<Item> itemList = dao.itemQuery(orderId);
+        closeAll();
+        return itemList;
     }
 }

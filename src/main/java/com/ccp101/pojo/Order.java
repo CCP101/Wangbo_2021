@@ -9,7 +9,7 @@ import java.util.Date;
  */
 public class Order {
     private int id;
-    private int userId;
+    private int user_id;
     private String no;
     private double price;
     private Date createDate;
@@ -22,20 +22,20 @@ public class Order {
         this.id = id;
     }
 
-    public int getUserId() {
-        return userId;
-    }
-
-    public void setUserId(int userId) {
-        this.userId = userId;
-    }
-
     public String getNo() {
         return no;
     }
 
     public void setNo(String no) {
         this.no = no;
+    }
+
+    public int getUser_id() {
+        return user_id;
+    }
+
+    public void setUser_id(int user_id) {
+        this.user_id = user_id;
     }
 
     public double getPrice() {
@@ -56,6 +56,6 @@ public class Order {
 
     @Override
     public String toString() {
-        return "Order{" + "id=" + id + ", userId=" + userId + ", no='" + no + '\'' + ", price=" + price + ", createDate=" + createDate + '}';
+        return "Order{" + "id=" + id + ", user_id=" + user_id + ", no='" + no + '\'' + ", price=" + price + ", createDate=" + createDate + '}';
     }
 }

@@ -10,9 +10,14 @@ import java.awt.*;
  * @create: 2021/2/15 14:52
  */
 public class TableSetting {
-    public void setting(JTable table,JPanel panel){
-        table.getTableHeader().setBounds(50, 50, 500, 20);
-        table.setBounds(50, 70, 500, 400);
+    public void setting(JTable table,JPanel panel,boolean FLAG){
+        if (FLAG){
+            table.getTableHeader().setBounds(50, 50, 600, 20);
+            table.setBounds(50, 70, 600, 400);
+        }else{
+            table.getTableHeader().setBounds(90, 80, 500, 20);
+            table.setBounds(90, 100, 500, 300);
+        }
         table.setSelectionBackground(new Color(99, 175, 229));
         // 设置表格中的数据居中显示
         DefaultTableCellRenderer r = new DefaultTableCellRenderer();
