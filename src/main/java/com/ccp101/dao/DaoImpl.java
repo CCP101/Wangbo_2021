@@ -1,5 +1,7 @@
 package com.ccp101.dao;
 
+import com.ccp101.pojo.Item;
+import com.ccp101.pojo.Order;
 import com.ccp101.pojo.Product;
 import com.ccp101.pojo.User;
 import org.apache.ibatis.exceptions.PersistenceException;
@@ -18,7 +20,7 @@ import java.util.List;
  * @version: v1.0
  * @create: 2021/2/7 15:57
  */
-public class DaoImpl implements ProductDao, UserDao {
+public class DaoImpl implements ProductDao, UserDao, OrderDao, ItemDao {
 
     private static final Logger logger = Logger.getLogger(DaoImpl.class);
     private InputStream in;
@@ -51,6 +53,11 @@ public class DaoImpl implements ProductDao, UserDao {
         }
     }
 
+    /**
+     * 从数据库导入所有商品
+     *
+     * @return 商品列表
+     */
     @Override
     public List<Product> productImport() {
         initSession();
@@ -61,10 +68,10 @@ public class DaoImpl implements ProductDao, UserDao {
     }
 
     @Override
-    public List<User> UserImport() {
+    public List<User> userImport() {
         initSession();
         UserDao dao = session.getMapper(UserDao.class);
-        List<User> list = dao.UserImport();
+        List<User> list = dao.userImport();
         closeAll();
         return list;
     }
@@ -76,10 +83,10 @@ public class DaoImpl implements ProductDao, UserDao {
      * @return 返回下标号
      */
     @Override
-    public Integer UserLogin(User user) {
+    public Integer userLogin(User user) {
         initSession();
         UserDao dao = session.getMapper(UserDao.class);
-        Integer id = dao.UserLogin(user);
+        Integer id = dao.userLogin(user);
         closeAll();
         return id;
     }
@@ -91,10 +98,10 @@ public class DaoImpl implements ProductDao, UserDao {
      * @throws PersistenceException 向上抛出SQL异常
      */
     @Override
-    public void UserInsert(User user) throws PersistenceException {
+    public void userInsert(User user) throws PersistenceException {
         initSession();
         UserDao dao = session.getMapper(UserDao.class);
-        dao.UserInsert(user);
+        dao.userInsert(user);
         logger.info("注册成功");
         session.commit();
         closeAll();
@@ -106,10 +113,10 @@ public class DaoImpl implements ProductDao, UserDao {
      * @return 返回新的下标
      */
     @Override
-    public Integer UserIndex() {
+    public Integer userIndex() {
         initSession();
         UserDao dao = session.getMapper(UserDao.class);
-        Integer id = dao.UserIndex();
+        Integer id = dao.userIndex();
         if (id == null) {
             id = 0;
         }
@@ -124,10 +131,10 @@ public class DaoImpl implements ProductDao, UserDao {
      * @return true为已经存在该用户名
      */
     @Override
-    public String UserDuplicate(String name) {
+    public String userDuplicate(String name) {
         initSession();
         UserDao dao = session.getMapper(UserDao.class);
-        String nameGet = dao.UserDuplicate(name);
+        String nameGet = dao.userDuplicate(name);
         if (nameGet != null) {
             return "true";
         } else {
@@ -142,19 +149,86 @@ public class DaoImpl implements ProductDao, UserDao {
      * @return 返回User类对象
      */
     @Override
-    public User UserGet(Integer index) {
+    public User userGet(Integer index) {
         initSession();
         UserDao dao = session.getMapper(UserDao.class);
-        User loginUser = dao.UserGet(index);
+        User loginUser = dao.userGet(index);
         closeAll();
         return loginUser;
     }
 
+    /**
+     * 更改用户信息
+     *
+     * @param user 新的User类
+     */
     @Override
     public void changePwd(User user) {
         initSession();
         UserDao dao = session.getMapper(UserDao.class);
         dao.changePwd(user);
+        session.commit();
+        closeAll();
+    }
+
+    /**
+     * 向数据库写入订单信息
+     *
+     * @param order Order类
+     */
+    @Override
+    public void orderWrite(Order order) {
+        initSession();
+        OrderDao dao = session.getMapper(OrderDao.class);
+        dao.orderWrite(order);
+        session.commit();
+        closeAll();
+    }
+
+    /**
+     * 从数据库获取下一个订单下表
+     *
+     * @return 获取订单下标
+     */
+    @Override
+    public Integer orderIndex() {
+        initSession();
+        OrderDao dao = session.getMapper(OrderDao.class);
+        Integer id = dao.orderIndex();
+        if (id == null) {
+            id = 0;
+        }
+        closeAll();
+        return id + 1;
+    }
+
+    /**
+     * 从数据库获取下一个订单详情下表
+     *
+     * @return 获取订单详情下标
+     */
+    @Override
+    public Integer itemIndex() {
+        initSession();
+        ItemDao dao = session.getMapper(ItemDao.class);
+        Integer id = dao.itemIndex();
+        if (id == null) {
+            id = 0;
+        }
+        closeAll();
+        return id + 1;
+    }
+
+    /**
+     * 向数据库写入订单详情信息
+     *
+     * @param item Item类
+     */
+    @Override
+    public void itemWrite(Item item) {
+        initSession();
+        ItemDao dao = session.getMapper(ItemDao.class);
+        dao.itemWrite(item);
         session.commit();
         closeAll();
     }

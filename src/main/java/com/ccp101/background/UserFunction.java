@@ -37,7 +37,7 @@ public class UserFunction {
         String pwdEncrypt = AES.encrypt(pwd, secretKey);
         test.setPassword(pwdEncrypt);
         //传入临时User对象交给MyBaits
-        Integer result = dao.UserLogin(test);
+        Integer result = dao.userLogin(test);
         int num = Objects.requireNonNullElse(result, 0);
         //清空输入框内容
         for (int i = 0; i < panel.getComponentCount(); i++) {
@@ -85,7 +85,7 @@ public class UserFunction {
             }
         }
         //判断是否重复
-        if (dao.UserDuplicate(name).equals("true")) {
+        if (dao.userDuplicate(name).equals("true")) {
             logger.error("用户名重复");
             JOptionPane.showMessageDialog(panel, "用户名重复！");
             return;
@@ -95,10 +95,10 @@ public class UserFunction {
         test.setUserName(name);
         String pwdEncrypt = AES.encrypt(pwd, secretKey);
         test.setPassword(pwdEncrypt);
-        test.setId(dao.UserIndex());
+        test.setId(dao.userIndex());
         test.setStatus(true);
         try {
-            dao.UserInsert(test);
+            dao.userInsert(test);
             logger.info("注册成功");
             JOptionPane.showMessageDialog(panel, "注册成功");
         } catch (PersistenceException e) {
@@ -107,7 +107,7 @@ public class UserFunction {
         }
 
         /*导入全部用户数据不通过MySQL判断写法
-        List<User> tempList = dao.UserImport();
+        List<User> tempList = dao.userImport();
         for (User user : tempList) {
             if (user.getUserName().equals(name)){
                 logger.error("系统已存在同名账户");
@@ -120,7 +120,7 @@ public class UserFunction {
         test.setPassword(pwd);
         test.setId(tempList.get(tempList.size() - 1).getId()+1);
         try{
-            dao.UserInsert(test);
+            dao.userInsert(test);
             logger.info("注册成功");
             JOptionPane.showMessageDialog(panel,"注册成功");
         }catch (PersistenceException e){

@@ -2,7 +2,11 @@ package com.ccp101.gui;
 
 import com.ccp101.background.ProjectData;
 import com.ccp101.config.TableSetting;
+import com.ccp101.dao.DaoImpl;
+import com.ccp101.pojo.Item;
+import com.ccp101.pojo.Order;
 import com.ccp101.pojo.Product;
+import com.ccp101.pojo.User;
 import org.apache.log4j.Logger;
 
 import javax.swing.*;
@@ -11,6 +15,9 @@ import javax.swing.table.AbstractTableModel;
 import javax.swing.table.TableModel;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 
@@ -26,8 +33,10 @@ public class CartGUI {
         panel.removeAll();
         panel.setLayout(null);
 
+        DaoImpl dao = new DaoImpl();
         List<Product> productList = data.getProductList();
         HashMap<Integer, Integer> cart = data.getShoppingCart();
+        User user = data.getUser();
         HashMap<Integer, Integer> tempCart = new HashMap<>();
         for (Integer integer : cart.keySet()) {
             if (cart.get(integer) != 0) {
@@ -37,6 +46,9 @@ public class CartGUI {
         Object[][] rowData = generateData(tempCart, productList);
         Object[] columnNames = {"序号", "名称", "商品编号", "单价", "数量", "总额"};
         JTable table = new JTable(new AbstractTableModel() {
+
+            private static final long serialVersionUID = 659637128155921285L;
+
             @Override
             public int getRowCount() {
                 return rowData.length;
@@ -70,7 +82,7 @@ public class CartGUI {
             @Override
             public void setValueAt(Object newValue, int rowIndex, int columnIndex) {
                 {
-                    //todo 197548E7超大数
+                    //TODO 197548E7超大数校验
                     if (newValue == null || !newValue.toString().matches("^([1-9][0-9]*)+(.[0-9]{1,2})?$")) {
                         JOptionPane.showMessageDialog(null, "只能输入数字!");
                         return;
@@ -165,7 +177,47 @@ public class CartGUI {
         });
 
         submitButton.addActionListener(e -> {
-
+            int result = JOptionPane.showConfirmDialog(frame, "是否结算购物车", "提示", JOptionPane.YES_NO_CANCEL_OPTION);
+            if (result == 0) {
+                Order order = new Order();
+                int id = dao.orderIndex();
+                String orderId = String.valueOf(id + 10000);
+                double price = Double.parseDouble(tableModel.getValueAt(rowData.length - 1, 5).toString());
+                SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+                Date date = new Date();
+                String dateString = dateFormat.format(date);
+                order.setId(id);
+                order.setUserId(user.getId());
+                order.setNo(orderId);
+                order.setPrice(price);
+                try {
+                    order.setCreateDate(dateFormat.parse(dateString));
+                    logger.info(dateFormat.parse(dateString));
+                } catch (ParseException parseException) {
+                    parseException.printStackTrace();
+                }
+                dao.orderWrite(order);
+                for (Integer integer : tempCart.keySet()) {
+                    Product product = productList.get(integer-1);
+                    Integer num = tempCart.get(integer);
+                    int idItem = dao.itemIndex();
+                    double priceSum = product.getPrice() * num;
+                    Item item = new Item();
+                    item.setId(idItem);
+                    item.setProductId(integer);
+                    item.setNum(num);
+                    item.setPrice(priceSum);
+                    item.setOrderId(id);
+                    dao.itemWrite(item);
+                }
+                for (Integer integer : cart.keySet()) {
+                    if (cart.get(integer) != 0) {
+                        cart.put(integer, 0);
+                    }
+                }
+                JOptionPane.showMessageDialog(frame, "结算成功！", "消息提示", JOptionPane.INFORMATION_MESSAGE);
+                cartSetting(frame, panel, data);
+            }
         });
 
         TableSetting setting = new TableSetting();

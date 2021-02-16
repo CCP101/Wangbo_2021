@@ -20,7 +20,7 @@ public class ProjectData {
     public void init(int num) {
         DaoImpl dao = new DaoImpl();
         productList = dao.productImport();
-        user = dao.UserGet(num);
+        user = dao.userGet(num);
         HashMap<Integer,Integer> cart = new HashMap<>();
         for (Product product : productList) {
             cart.put(product.getId(),0);
