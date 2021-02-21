@@ -29,6 +29,7 @@ public class UserInterface {
         frame.add(panel1);
         JPanel panel2 = new JPanel();
         frame.add(panel2);
+        //分割成两个区域且不可拖动
         JSplitPane jSplitPane = new JSplitPane();
         jSplitPane.setEnabled(false);
         jSplitPane.setOrientation(JSplitPane.HORIZONTAL_SPLIT);
@@ -44,7 +45,6 @@ public class UserInterface {
         menu.menu(frame);
         //操作区域
         operating(frame, panel1, panel2, data);
-
         frame.setLocationRelativeTo(null);
         frame.setVisible(true);
     }
@@ -58,7 +58,6 @@ public class UserInterface {
      * @param data        用户数据
      */
     public void operating(JFrame frame, JPanel panelButton, JPanel panel, ProjectData data) {
-
         ProductGUI productGUI = new ProductGUI();
         CartGUI cartGUI = new CartGUI();
         OrderGUI orderGUI = new OrderGUI();
@@ -77,7 +76,7 @@ public class UserInterface {
         JButton userButton = new JButton("用户管理");
         userButton.setBounds(20, 490, 100, 40);
         panelButton.add(userButton);
-
+        //按钮点击事件绑定
         showButton.addActionListener(e -> productGUI.selectProduct(frame, panel, data));
         shoppingButton.addActionListener(e -> cartGUI.cartSetting(frame, panel, data));
         orderButton.addActionListener(e -> orderGUI.orderSetting(panel, data));

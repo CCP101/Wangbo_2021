@@ -35,6 +35,7 @@ public class ProductGUI {
         HashMap<Integer, Integer> tempCart = data.getShoppingCart();
         Object[][] tempObject = new Object[productList.size()][5];
         Object[] columnNames = {"序号", "名称", "价格", "库存", "状态"};
+        //表格数据填充
         for (int i = 0; i < productList.size(); i++) {
             Product temp = productList.get(i);
             tempObject[i][0] = temp.getId();
@@ -50,14 +51,13 @@ public class ProductGUI {
         JTable table = new JTable(model);
         table.addMouseListener(new MouseAdapter() {
             /** 双击弹窗确认是否加入购物车
-             * @param e 鼠标操作
+             * @param e 鼠标双击操作
              */
             public void mouseClicked(MouseEvent e) {
                 if (e.getClickCount() == 2) {
                     int selectedRow = table.getSelectedRow();
                     logger.info("选中" + selectedRow);
                     int result = JOptionPane.showConfirmDialog(frame, "是否加入购物车", "提示", JOptionPane.YES_NO_CANCEL_OPTION);
-                    logger.info("选择" + result);
                     if (result == 0) {
                         if (tempCart.get(selectedRow + 1) == 0) {
                             tempCart.remove(selectedRow + 1);
@@ -74,5 +74,7 @@ public class ProductGUI {
         });
         TableSetting setting = new TableSetting();
         setting.setting(table, panel, true);
+        panel.validate();
+        panel.repaint();
     }
 }

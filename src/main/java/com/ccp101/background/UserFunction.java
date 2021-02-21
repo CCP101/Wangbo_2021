@@ -105,28 +105,6 @@ public class UserFunction {
             //获取传上来的异常，逻辑错误通过MyBaits查看
             logger.error("存在SQL错误");
         }
-
-        /*导入全部用户数据不通过MySQL判断写法
-        List<User> tempList = dao.userImport();
-        for (User user : tempList) {
-            if (user.getUserName().equals(name)){
-                logger.error("系统已存在同名账户");
-                JOptionPane.showMessageDialog(panel,"系统已存在同名账户！");
-                return;
-            }
-        }
-        User test = new User();
-        test.setUserName(name);
-        test.setPassword(pwd);
-        test.setId(tempList.get(tempList.size() - 1).getId()+1);
-        try{
-            dao.userInsert(test);
-            logger.info("注册成功");
-            JOptionPane.showMessageDialog(panel,"注册成功");
-        }catch (PersistenceException e){
-            logger.error("存在SQL错误");
-        }*/
-
         //清空输入框内容
         for (int i = 0; i < panel.getComponentCount(); i++) {
             Object obj = panel.getComponent(i);

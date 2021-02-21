@@ -34,9 +34,11 @@ public class CartGUI {
         panel.setLayout(null);
 
         DaoImpl dao = new DaoImpl();
+        TableSetting setting = new TableSetting();
         List<Product> productList = data.getProductList();
         HashMap<Integer, Integer> cart = data.getShoppingCart();
         User user = data.getUser();
+        //临时HashMap，只包含加入购物车的商品进行深拷贝
         HashMap<Integer, Integer> tempCart = new HashMap<>();
         for (Integer integer : cart.keySet()) {
             if (cart.get(integer) != 0) {
@@ -99,11 +101,14 @@ public class CartGUI {
             int lastRow = e.getLastRow();
             int column = e.getColumn();
             if (e.getType() == TableModelEvent.UPDATE) {
+                //设置可编辑区域
                 if (column != 4 || firstRow == rowData.length - 1) {
                     return;
                 }
+                //自动更新数据
                 for (int row = firstRow; row <= lastRow; row++) {
                     if (row != rowData.length - 1) {
+                        //Object -> String -> double/int
                         int id = Integer.parseInt(tableModel.getValueAt(row, 2).toString());
                         double price = Double.parseDouble(tableModel.getValueAt(row, 3).toString());
                         int num = Integer.parseInt(tableModel.getValueAt(row, 4).toString());
@@ -133,6 +138,7 @@ public class CartGUI {
             public void mouseClicked(MouseEvent e) {
                 if (e.getClickCount() == 2) {
                     int selectedRow = table.getSelectedRow();
+                    //合计行禁止编辑
                     if (selectedRow == rowData.length - 1) {
                         return;
                     }
@@ -147,7 +153,6 @@ public class CartGUI {
                             j++;
                         }
                         tempCart.remove(remove);
-
                         cart.put(remove, 0);
                         logger.info("删除" + remove);
                         JOptionPane.showMessageDialog(frame, "删除成功！", "消息提示", JOptionPane.INFORMATION_MESSAGE);
@@ -168,6 +173,7 @@ public class CartGUI {
         clearButton.addActionListener(e -> {
             int result = JOptionPane.showConfirmDialog(frame, "是否清空购物车", "提示", JOptionPane.YES_NO_CANCEL_OPTION);
             if (result == 0) {
+                //购物车清空
                 for (Integer integer : cart.keySet()) {
                     if (cart.get(integer) != 0) {
                         cart.put(integer, 0);
@@ -182,14 +188,16 @@ public class CartGUI {
             int result = JOptionPane.showConfirmDialog(frame, "是否结算购物车", "提示", JOptionPane.YES_NO_CANCEL_OPTION);
             if (result == 0) {
                 Order order = new Order();
+                //订单数据预处理格式化
                 int id = dao.orderIndex();
                 String orderId = String.valueOf(id + 10000);
                 double price = Double.parseDouble(tableModel.getValueAt(rowData.length - 1, 5).toString());
                 SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
                 Date date = new Date();
                 String dateString = dateFormat.format(date);
+                //订单类数据设置并写入数据库
                 order.setId(id);
-                order.setUser_id(user.getId());
+                order.setUserId(user.getId());
                 order.setNo(orderId);
                 order.setPrice(price);
                 try {
@@ -199,6 +207,7 @@ public class CartGUI {
                     parseException.printStackTrace();
                 }
                 dao.orderWrite(order);
+                //订单详细获取并分条写入数据库
                 for (Integer integer : tempCart.keySet()) {
                     Product product = productList.get(integer - 1);
                     Integer num = tempCart.get(integer);
@@ -206,12 +215,13 @@ public class CartGUI {
                     double priceSum = product.getPrice() * num;
                     Item item = new Item();
                     item.setId(idItem);
-                    item.setProduct_id(integer);
+                    item.setProductId(integer);
                     item.setNum(num);
                     item.setPrice(priceSum);
-                    item.setOrder_id(id);
+                    item.setOrderId(id);
                     dao.itemWrite(item);
                 }
+                //购物车清空
                 for (Integer integer : cart.keySet()) {
                     if (cart.get(integer) != 0) {
                         cart.put(integer, 0);
@@ -221,11 +231,18 @@ public class CartGUI {
                 cartSetting(frame, panel, data);
             }
         });
-
-        TableSetting setting = new TableSetting();
         setting.setting(table, panel, true);
+        panel.validate();
+        panel.repaint();
     }
 
+    /**
+     * 根据输入值填充表格数据
+     *
+     * @param tempCart    购物车
+     * @param productList 产品清单
+     * @return 表格数据
+     */
     public Object[][] generateData(HashMap<Integer, Integer> tempCart, List<Product> productList) {
         Object[][] tempObject = new Object[tempCart.size() + 1][6];
         int i = 0;

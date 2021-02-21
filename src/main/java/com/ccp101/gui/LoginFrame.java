@@ -65,7 +65,7 @@ public class LoginFrame {
         panel.add(registerButton);
         registerButton.addActionListener(e -> userFunction.userRegister(userText.getText(),
                 new String(passwordText.getPassword()), panel));
-        //密码输入框监听回车
+        //密码输入框监听回车事件
         passwordText.addKeyListener(new KeyAdapter() {
             @Override
             public void keyTyped(KeyEvent e) {

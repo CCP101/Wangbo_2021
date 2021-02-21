@@ -11,27 +11,28 @@ import java.awt.*;
  */
 public class TableSetting {
     public void setting(JTable table,JPanel panel,boolean FLAG){
-        if (FLAG){
-            table.getTableHeader().setBounds(50, 50, 600, 20);
-            table.setBounds(50, 70, 600, 400);
-        }else{
-            table.getTableHeader().setBounds(90, 80, 500, 20);
-            table.setBounds(90, 100, 500, 300);
-        }
         table.setSelectionBackground(new Color(99, 175, 229));
         // 设置表格中的数据居中显示
         DefaultTableCellRenderer r = new DefaultTableCellRenderer();
         r.setHorizontalAlignment(JLabel.CENTER);
         table.setDefaultRenderer(Object.class, r);
+        //表头与数据分别设置
         table.getTableHeader().setFont(new Font("微软雅黑", Font.BOLD, 16));
         table.setFont(new Font("微软雅黑", Font.PLAIN, 15));
         table.setGridColor(Color.GRAY);
         table.setRowHeight(35);
         table.setShowHorizontalLines(true);
         table.setShowVerticalLines(true);
-        panel.add(table.getTableHeader());
-        panel.add(table);
-        panel.validate();
-        panel.repaint();
+        if (FLAG){
+            table.setPreferredScrollableViewportSize(new Dimension(600, 350));
+            JScrollPane scrollPane = new JScrollPane(table);
+            scrollPane.setBounds(50,50,600,350);
+            panel.add(scrollPane);
+        }else{
+            table.setPreferredScrollableViewportSize(new Dimension(500, 300));
+            JScrollPane scrollPane = new JScrollPane(table);
+            scrollPane.setBounds(90,80,500,300);
+            panel.add(scrollPane);
+        }
     }
 }

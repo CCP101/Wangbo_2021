@@ -246,6 +246,10 @@ public class DaoImpl implements ProductDao, UserDao, OrderDao, ItemDao {
         closeAll();
     }
 
+    /** 根据订单编号在数据库内查询并返回包含了商品具体信息的List<Item>
+     * @param orderId 订单编号
+     * @return 该订单下的详细清单
+     */
     @Override
     public List<Item> itemQuery(Integer orderId) {
         initSession();

@@ -7,10 +7,10 @@ package com.ccp101.pojo;
  */
 public class Item {
     private int id;
-    private int product_id;
+    private int productId;
     private int num;
     private double price;
-    private int order_id;
+    private int orderId;
 
     public int getId() {
         return id;
@@ -20,12 +20,12 @@ public class Item {
         this.id = id;
     }
 
-    public int getProduct_id() {
-        return product_id;
+    public int getProductId() {
+        return productId;
     }
 
-    public void setProduct_id(int product_id) {
-        this.product_id = product_id;
+    public void setProductId(int productId) {
+        this.productId = productId;
     }
 
     public int getNum() {
@@ -44,16 +44,16 @@ public class Item {
         this.price = price;
     }
 
-    public int getOrder_id() {
-        return order_id;
+    public int getOrderId() {
+        return orderId;
     }
 
-    public void setOrder_id(int order_id) {
-        this.order_id = order_id;
+    public void setOrderId(int orderId) {
+        this.orderId = orderId;
     }
 
     @Override
     public String toString() {
-        return "Item{" + "id=" + id + ", product_id=" + product_id + ", num=" + num + ", price=" + price + ", order_id=" + order_id + '}';
+        return "Item{" + "id=" + id + ", productId=" + productId + ", num=" + num + ", price=" + price + ", orderId=" + orderId + '}';
     }
 }
